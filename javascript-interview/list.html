@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- *Strings(Simple Strings and Escape Character)
+    *Strings Method(Need To Learn Some Method)
+    *String Search() -->
+ 
+<!-- 
+
+    *Javascript
+    *Data Type
+    -Primitve
+    -Non Primitive
+    *DOM(Document Object Modal)
+    *BOM(Browser Object Modal)
+    *Function Inovcation 
+    *Operator
+    *Varible(var,let,const)
+    *Function
+    *Function Invocation
+    *Objects(Simple Object)
+    *Events(onchange,onclick,onmouseover,onmouseout,onkeydown,onload)
+    * Diff. between  window and document
+    *HOC (Higher Order Function)
+    *Callback
+    *Callback Hell
+    *Asynchronous
+    *Async/Await Function
+    *Promises (Need to learn more)
+    *Use Strict
+    *Hositing (Need to check video)
+    *This
+    *Arrow Function
+    *Diff between (Arrow Vs Normal function)
+    *Ternary Operator
+    *Template Literal
+    *Anonymous function
+    *Event Bubbling
+    *Stop Propagation
+    *Event PreventDefault
+    *setTimeout and setInterval
+    *clearTimeout and clearInterval
+    *Temporal Dead Zone (Need to check video)
+    *Spread and Rest Operator
+    *Destructuring 
+    *Sort
+    *charAt
+    *charCodeAt
+    *unshift,shift,pop,push
+    *Undefined Vs Null
+    *Split
+    *map
+    *flatMap
+    *filter
+    *find
+    *reduce
+    *every
+    *some
+    *sort
+    *Object Copy Shallow Vs Deep
+    *Prototype (Need to check)
+    *Call,Apply,Bind
+    *Currying
+    *Event Deligation
+    *Closure(Need to check video)
+
+    *-ContructorFunction (Object)
+    * Prototype
+    * Class (Object)
+    * Inhertitance (Construction Function / Classes)
+    *Scope
+    -Local Scope
+    -Global Scop
+    -Function Scope
+
+-->
+
+<form id="accountForm">
+    <input type="text"  placeholder="name" id="customerName"/>
+    <input type="text"  placeholder="Balance" id="balance"/>
+    <button type="submit">Create Account</button>
+</form>
+
+<form id="depositeForm">
+    <input type="text"  placeholder="Account Number" id="accountNumber"/>
+    <input type="text"  placeholder="Amount " id="amount"/>
+    <button type="submit">Deposite</button>
+</form>
+
+
+<script>
+
+      
+class BankDetails{
+    name="SSSS";
+    accountNumber;
+    balance=0;
+
+constructor(name,balance=0){
+      this.name=name;
+      this.accountNumber=Date.now();
+      this.balance=balance;
+    }
+
+    deposite(amount){
+      this.balance += amount;
+    };
+
+    withdraw(amount){
+        this.balance= this.balance - parseInt(amount);
+     };
+
+}
+
+const user= new BankDetails("Lucky Trivedi",1000)
+user.deposite(3000)
+console.log(user)
+
+//     function BankDetails(name,balance=0){
+//     this.name=name;
+    
+//     this.accountNumber=Date.now();
+    
+//     this.balance=balance;
+
+//     // this.deposite =function(amount){
+//     //     this.balance += amount;
+//     // };
+//     this.withdraw = function(amount){
+//         this.balance= this.balance - parseInt(amount);
+//     };
+// }
+
+// BankDetails.prototype.deposite=function(amount){
+//         this.balance += amount;
+//     };
+
+// const user1= new BankDetails(name,balanace)
+// const user2= new BankDetails("Lucky Trivedi")
+
+// user1.deposite(7000)
+// user2.deposite(1500)
+// user1.withdraw(1000)
+
+// console.log(user1,user2)
+
+// var accountForm = document.querySelector('#accountForm')
+// var customerName=document.querySelector('#customerName')
+// var balance=document.querySelector('#balance')
+
+// var accounts=[]
+// accountForm.addEventListener('submit',function(e){
+//     e.preventDefault()
+//     // console.log(customerName.value,balance.value)
+//     // const account= new BankDetails()
+//     const account= new BankDetails(customerName.value,+balance.value)
+//     accounts.push(account)
+//     console.log(accounts)
+
+// })
+
+
+// var depositeForm = document.querySelector('#depositeForm')
+// var accountNumber = document.querySelector('#accountNumber')
+// var amount = document.querySelector('#amount')
+
+
+// depositeForm.addEventListener('submit',function(e){
+//     e.preventDefault()
+//     const account = accounts.find((account)=>account.accountNumber === +accountNumber.value)
+//     var a =parseInt(amount.value )
+//     account.deposite(a)
+//     console.log(accounts)
+
+// })
+
+
+
+
+
+
+// console.log("Total Deposite User 1:",)
+// console.log("Withdraw User 1:",)
+
+</script>
+</body>
+</html>

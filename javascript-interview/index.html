@@ -1,0 +1,1835 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+/* body{
+    font-size: 16px
+} */
+.container{
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.flex_row {
+    display: flex;
+   margin: 0 -15px;     
+   justify-content: space-between;
+   font-size: 16px;
+}   
+.item.item{
+    color: blue;
+    width: 250px;
+    padding:  0 15px;
+    background-color: #ccc;
+    font-size: 3em;
+    /* height: calc(100vh - 20px); */
+}
+#el{
+    color:red;
+}
+details{
+    margin: 15px 0;
+}
+.form_wrapper {
+    width: 400px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    padding: 20px;
+}
+.form_wrapper .form_filed {
+    margin: 0 0 12px 0;
+}
+input[type="text"],input[type="email"],select{
+    width: 100%;
+    padding: 5px 0;
+    padding: 4px 13px;
+    box-sizing: border-box;
+}
+.box {
+    width: 100px;
+    height: 100px;
+    display: inline-flex;
+    border: 1px solid #ccc;
+    margin: 0 12px;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    border-radius: 5px;
+    box-shadow: 0 0 6px #ccc;
+}
+</style>
+
+<body>
+
+    <div class="container">
+
+<ul class="category" id="itemCategory">
+    <li id="laptop">
+        Laptop
+    </li> 
+    <li id="camera">
+        Camera
+    </li> 
+    <li id="Bags">
+        Bags
+    </li> 
+</ul>
+    <!-- <ul class="category" id="category">
+            <li id="Laptops"> Laptops</li>
+            <li id="cameras"> Cameras</li>
+            <li id="Shoes"> Shoes</li>   
+    </ul> -->
+
+<div id="userData">
+
+</div>
+
+<div class="flex_row" id="row">
+    <div class="item" id="el" > Item 1 </div>
+    <div class="item" id="el">Item 2</div>
+    <div class="item" id="el">Item 3 </div>  
+    <!-- <div class="item"> Item 1 </div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3 </div>   -->
+</div>
+
+
+    </div>
+
+
+
+<h1 id="1">JS Program</h1>
+
+<details>
+    <summary>Program 1. Array length const arr = [20,30,50,2,3]</summary>
+    <p>
+        <pre>
+            const arr = [20,30,50,2,3]
+            console.log(arr.length)
+        </pre>
+    </p>
+  </details>
+
+<details>
+    <summary>Program 2. Array reverse const arr = [20,30,50,2,3]</summary>
+    <p>
+        <pre>
+            const arr = [20,30,50,2,3]
+            console.log(arr.reverse())
+        </pre>
+    </p>
+  </details>
+
+
+<details>
+    <summary>Program 3. Last Elemnt const arr = [20,30,50,2,3]</summary>
+    <p>
+        <pre>
+            const arr = [20,30,50,2,3]
+            const length = arr[arr.length-1]
+            console.log(length)
+        </pre>
+    </p>
+  </details>
+
+
+
+<details>
+    <summary>Program 4. Set Array acending and desending order const arr = [20,30,50,2,3]</summary>
+    <p>
+        <pre>
+            // Ascending
+
+             const arr = [20,30,50,2,3]
+             const newarr  = arr.sort(function(a,b){return a-b})
+             console.log(newarr)
+             
+            // desending
+
+             const arr = [20,30,50,2,3]
+             const newarr  = arr.sort(function(a,b){return b-a})
+             console.log(newarr)
+        </pre>
+    </p>
+  </details>
+
+  <details>
+    <summary>Program 5. Set Array alphabet order const cityarr = ["Amritsar","Delhi","Agra","Bhopal","Nagpur"]</summary>
+    <p>
+        <pre>
+            const cityarr = ["Amritsar","Delhi","Agra","Bhopal","Nagpur"]
+            const newarr = cityarr.sort()
+            console.log(newarr)
+            console.log(newarr.reverse())
+        </pre>
+    </p>
+  </details>
+
+  <details>
+    <summary>Program 6. Smallest String in Array cityarr = ["Amritsar","Delhi","Agra","Bhopal","Nagpur"]</summary>
+    <p>
+        <pre>
+            var cityarr = ["Amritsar","Delhi","Agra","Bhopal","Nagpur"]
+
+            var smString= cityarr.reduce(function (a,b) { return a.length < b.length?  a :b   }   )
+            
+            console.log(smString)
+            
+             console.log( Math.min(...citylist.map(o => o.length)))
+        </pre>
+    </p>
+  </details>
+
+
+  <details>
+    <summary>Program 7. Print string length in place of city name cityarr = ["Amritsar","Delhi","Agra","Bhopal","Nagpur"]</summary>
+    <p>
+        <pre>
+            const nameist = ["Amritsar","Delhi","Agra","Bhopal","Nagpur"]
+            const newarry=nameist.map((item)=>item.length)
+            console.log(newarry)     
+        </pre>
+    </p>
+  </details>
+
+
+
+  <details>
+    <summary>Program 8. Max/Min value in Array const arr = [20,30,50,2,3]</summary>
+    <p>
+        <pre>
+            const vb = [20,30,50,2,3]
+            console.log(Math.max(...vb))
+            console.log(Math.min(...vb))
+        </pre>
+    </p>
+  </details>
+
+  <details>
+    <summary>Program 9. Remove Duplicate  Array const arr = [20,30,50,2,3,50,80,30]</summary>
+    <p>
+        <pre>
+            const arr = [20,30,50,2,3,50,80,30]
+            var b = Array.from(new Set(arr))
+            console.log(b)
+        </pre>
+    </p>
+  </details>
+
+
+  <details>
+    <summary>Program 10. Remove 30 and 50 Elemnt from Array const arr = [20,30,50,2,3]</summary>
+    <p>
+        <pre>
+            const arr = [20,30,50,2,3]
+            console.log(arr.slice(1,3))
+        </pre>
+    </p>
+  </details>
+
+
+  <details>
+    <summary>Program 11. Remove 30 and 50 and add 40,60 in place of that Elemnt from Array const arr = [20,30,50,2,3]</summary>
+    <p>
+        <pre>
+            const brr = [20,30,50,2,3]
+            console.log(brr.splice(1,2,40,60))
+            console.log(brr)
+        </pre>
+    </p>
+  </details>
+
+  <details>
+    <summary>Program 12. Add(Push) 40 Elemnt last in array Array const arr = [20,30,50,2,3]</summary>
+    <p>
+        <pre>
+            //-Program 12  Push return length
+               const array = [20,30,50,2,3]
+               console.log(array.push(40,4))
+               console.log(array)
+        </pre>
+    </p>
+  </details>
+
+  <details>
+    <summary>Program 13. Remove(pop) Elemnt last in array Array const arr = [20,30,50,2,3]</summary>
+    <p>
+        <pre>
+            //-Program 13  Pop return remove element
+            const array = [20,30,50,2,3]
+            console.log(array.pop())
+            console.log(array)
+        </pre>
+    </p>
+  </details>
+
+  <details>
+    <summary>Program 14. Add(Unshift) Elemnt start in array Array const arr = [20,30,50,2,3]</summary>
+    <p>
+        <pre>
+            //Unshift return length
+            const array = [20,30,50,2,3]
+            console.log(array.unshift(40))
+            console.log(array)
+        </pre>
+    </p>
+  </details>
+
+
+  <details>
+    <summary>Program 15. Remove(shift) 20 Elemnt start in array Array const arr = [20,30,50,2,3]</summary>
+    <p>
+        <pre>
+            // Shift return remove element
+             const array = [20,30,50,2,3]
+             console.log(array.shift(20))
+             console.log(array)
+        </pre>
+    </p>
+  </details>
+
+
+  <details>
+    <summary>Program 16. Sum of array Array const arr = [20,30,50,2,3]</summary>
+    <p>
+        <pre>
+            const arr = [20,30,50,2,3]
+               arr.reduce(function (a,b) {
+                return a+b
+            })
+        </pre>
+    </p>
+  </details>
+
+  <details>
+    <summary>Program 17. Reseverse String var name = "Salil"</summary>
+    <p>
+        <pre>
+            var a = "Salil" 
+            var b=a.split("").reverse().join("")
+            console.log(b)
+
+        </pre>
+    </p>
+  </details>
+
+
+  <details>
+    <summary>Program 18. Reseverse Number var name = 123</summary>
+    <p>
+        <pre>
+            var a = 123
+            var c= 123+""
+            var d=c.split("").reverse().join("")
+            console.log(parseInt(d))
+
+        </pre>
+    </p>
+  </details>
+
+
+  <details>
+    <summary>Program 19. convert into single dimension array numArr = [1, [2, [3], 4, [5, 6, [7]]]]</summary>
+    <p>
+        <pre>
+            const numArr = [1, [2, [3], 4, [5, 6, [7]]]]
+            console.log(numArr.flat(3))
+
+           
+            const arr = [2, 5, [4, 6], 5];
+            const result = arr.flat().reduce((a,b) => a+b);
+            console.log(result);
+
+        </pre>
+    </p>
+  </details>
+
+
+  <details>
+    <summary>Program 20.   Call Objec Keys and Value Sepratly</summary>
+    <p>
+        <pre>
+              userDetails ={
+                             name:"Salil Trivedi",
+                             age:28,
+                             mobile:9654847170,
+                             city:"Noida"
+                         }
+                 var b=Object.keys(userDetails)
+                 console.log(b)
+                 userDetails ={
+                             name:"Salil Trivedi",
+                             age:28,
+                             mobile:9654847170,
+                             city:"Noida"
+                         }
+                 var b=Object.values(userDetails)
+                 console.log(b)
+        </pre>
+    </p>
+  </details>
+
+
+  <details>
+    <summary>Program 21. Delete Object Keys</summary>
+    <p>
+        <pre>
+                userDetails ={
+                             name:"Salil Trivedi",
+                             age:28,
+                             mobile:9654847170,
+                             city:"Noida"
+                         }
+                
+                 delete userDetails.name
+                
+                 console.log(userDetails)
+        </pre>
+    </p>
+  </details>
+
+
+
+
+
+  <details>
+    <summary>Program 22. Add dynamic property in object</summary>
+    <p>
+        <pre>
+             const property ="firstName"
+             const name="Salil Trivedi"
+            
+             const user ={
+                     [property]:name
+             }
+            
+             console.log(user)
+        </pre>
+    </p>
+  </details>
+
+
+  <details>
+    <summary>Program 23. Prototype Object</summary>
+    <p>
+        <pre>
+                 function userDetails(name,age,mobile,city){
+                             this.name=name,
+                             this.age=age,
+                             this.mobile=mobile,
+                             this.city=city
+                         }
+                 userDetails.prototype.gender="Male"
+                 const person1 = new userDetails("Salil", 28,9654847170,"Noida","male")
+                 const person2 = new userDetails("Nivedita", 30,9654847170,"Noida","female")
+                 console.log(person1)
+                 console.log(person2)
+        </pre>
+    </p>
+  </details>
+
+
+  <details>
+    <summary>Program 24. How do you check if an object has a property in JavaScript?</summary>
+    <p>
+        <pre>
+            userDetails.hasOwnProperty('name')
+        </pre>
+    </p>
+  </details>
+
+
+  <details>
+    <summary>Program 25. Object Key and Value itreate for in loop </summary>
+    <p>
+        <pre>
+             const user ={
+                 firstName:"Salil",
+                 lastName:"Trivedi",
+                 age:20
+             }
+             for(key in user){
+                 console.log(user[key])
+                 console.log(key)
+             }
+            
+        </pre>
+    </p>
+  </details>
+
+
+  <details>
+    <summary>Program 26. What is the difference between an object created using object literal notation and an object created using a constructor function? </summary>
+    <p>
+        <pre>
+            An object created using object literal notation is a single instance, while an object 
+            created using a constructor function can create multiple instances.
+        </pre>
+    </p>
+  </details>
+
+  <details>
+    <summary>Program 27. Shallow Copy and Deep Copy of Object  </summary>
+    <p>
+        <pre>
+            // Shallow Copy and Deep Copy 
+
+             let user1={
+                         name:"Salil ",
+                         age:28,
+                         mobile:9654847170,
+                         address:{
+                             streetName:"Chandar Vatika Complex",
+                             sector:45
+                         }
+                     }
+            
+             user2 = Object.assign({},user1);
+            
+             user2.name="Nivedita"
+            
+             user2.address.streetName="SD Vidya School"
+             user2.address.sector=45
+             console.log(user2)
+             console.log(user1)
+            
+             let user1={
+                         name:"Salil ",
+                         age:28,
+                         mobile:9654847170,
+                         address:{
+                             streetName:"Chandar Vatika Complex",
+                             sector:45
+                         }
+                     }
+            
+             user2 = JSON.parse(JSON.stringify(user1));
+            
+             user2.name="Nivedita"
+            
+             user2.address.streetName="SD Vidya School"
+             user2.address.sector=45
+              console.log(user2)
+             console.log(user1)
+        </pre>
+    </p>
+  </details>
+
+
+  <details>
+    <summary>Program 28. Call , Apply and Bind   </summary>
+    <p>
+        <pre>
+            //Shallow Copy and Deep Copy 
+             user1={
+                         name:"Salil ",
+                         age:28,
+                         mobile:9654847170,
+                         city:"Noida"
+                     }
+
+             const printFullName= function(lname){
+                   return  this.name+ ' '+ lname +' ' +this.city
+             }
+             user2={
+                         name:"Nivedita",
+                         age:26,
+                         mobile:9654847170,
+                         city:"Noida"
+                     }        
+
+             console.log(printFullName.call(user1,"Trivedi"))
+             console.log(printFullName.apply(user2,["Kumari"]))
+             const newUser= printFullName.bind(user1,"Trivedi")
+             console.log(newUser())
+
+
+
+             user1={
+                         name:"Salil ",
+                         age:28,
+                         mobile:9654847170,
+                         city:"Noida"
+                     }
+
+             const printFullName= function(lname){
+                   return  this.name+ ' '+ lname +' ' +this.city
+             }
+             user2={
+                         name:"Nivedita",
+                         age:26,
+                         mobile:9654847170,
+                         city:"Noida"
+                     }        
+
+             console.log(printFullName.call(user1,"Trivedi"))
+             console.log(printFullName.apply(user2,["Kumari"]))
+             const newUser= printFullName.bind(user1,"Trivedi")
+             console.log(newUser())
+
+        </pre>
+    </p>
+  </details>
+
+  <details>
+    <summary>Program 29. What is PolyFills ?  </summary>
+    <p>
+        <pre>
+            A polyfill is a piece of code (usually JavaScript on the Web) used to provide modern functionality on older browsers that do not natively support it.
+
+        </pre>
+        PolyFills for Map and For each
+    </p>
+  </details>
+
+
+  <details>
+    <summary>Program 30. What is Map VS For eachs ?  </summary>
+    <p>
+        <pre> The .map() methods iterates over an array, computes whatever logic you write inside the map body, and returns a NEW array.</pre>
+
+           <pre> ForEach is similar to .map() but it DOES NOT return an array.</pre>
+    </p>
+  </details>
+
+
+  <details>
+    <summary>Program 31. What is Async and Promises ?  </summary>
+    <p>
+        <pre>  </pre>
+    </p>
+  </details>
+
+
+
+  <details>
+    <summary>Program 32. find total [a] element in the array var arr = ['a', 'b', 'a', 'a', 'c', 'c'];  </summary>
+    <p>
+        <pre> 
+            var arr = ['a', 'b', 'a', 'a', 'c', 'c'];
+            var b = arr.filter(item =>{if(item==='a'){return item}     } ).length
+            console.log("a",b)    
+        </pre>
+    </p>
+  </details>
+
+  <details>
+    <summary>Program 33. Destructuring  Example  with array and object  </summary>
+    <p>
+        <pre> 
+            //Array Destructuring 
+            var arr = ['Salil','Trivedi','John','Doe','Erick','Shaly'];
+            const[a,e] = arr
+            console.log(a,e)
+
+            If you want to choose random elements from the given array then in array 
+            destructuring you can perform it as follows:
+
+            var arr = ['Salil','Trivedi','John','Doe','Erick','Shaly'];
+            const[a,,b] = arr;
+            console.log(a,b);
+
+
+            //Array Destructuring Rest Operator
+            var colors = ["Violet", "Indigo", "Blue", "Green", "Yellow", "Orange", "Red"];  
+            var [a,b,...args] = colors;  
+            console.log(a);   
+            console.log(b);   
+            console.log(args);
+
+
+            //Object Destructuring 
+            const profile = {
+                firstName: "Oluwatobi", 
+                lastName: "Sofela", 
+                website: "codesweetly.com"
+              };
+              const {firstName,lastName}  = profile
+              console.log(firstName,lastName)
+
+        </pre>
+    </p>
+  </details>
+
+
+  <details>
+    <summary>Program 34.  Map  Print firstName from the given arrray</summary>
+    <p>
+        <pre> 
+                var arr = [
+                        {
+                         firstName:"Salil",
+                         lastName:"Trivedi",
+                         age:25   
+                        },
+
+                        {
+                            firstName:"John",
+                            lastName:"Doe",
+                            age:18   
+                           },
+
+                           {
+                            firstName:"Rohit",
+                            lastName:"T",
+                            age:20   
+                           },
+                ];
+               var nameList = arr.map((item)=>{ return(item.firstName)})
+               console.log(nameList)
+        </pre>
+    </p>
+  </details>
+
+
+  <details>
+    <summary>Program 34.  Filter The Object if age is greater than 18</summary>
+    <p>
+        <pre> 
+          var arr = [
+                    {
+                    firstName:"Salil",
+                    lastName:"Trivedi",
+                    age:25   
+                    },
+
+                    {
+                        firstName:"John",
+                        lastName:"Doe",
+                        age:18   
+                    },
+
+                    {
+                        firstName:"Rohit",
+                        lastName:"T",
+                        age:20   
+                    },
+            ];
+        var nameList = arr.filter((item)=>{ 
+                        if(item.age>18)
+                {
+                    return item   
+                }
+            
+        })
+        console.log(nameList)
+        </pre>
+    </p>
+  </details>
+
+
+
+  <details>
+    <summary>Program 35.  Find The Object if age is greater than 18</summary>
+    <p>
+        <pre> 
+           // Return first result
+            var arr = [
+                        {
+                         firstName:"Salil",
+                         lastName:"Trivedi",
+                         age:25   
+                        },
+
+                        {
+                            firstName:"John",
+                            lastName:"Doe",
+                            age:18   
+                           },
+
+                           {
+                            firstName:"Rohit",
+                            lastName:"T",
+                            age:20   
+                           },
+                ];
+               var nameList = arr.find((item)=>{ 
+                            if(item.age>18)
+                       {
+                        return true   
+                       }
+                   
+               })
+               console.log(nameList)
+        </pre>
+    </p>
+  </details>
+
+
+  <details>
+    <summary>Program 36.  Object Freeze</summary>
+    <p>
+        <pre> 
+            const obj1 = { property1: 'initial_data' };
+            const obj2 = Object.freeze(obj1);
+            obj2.property1 = 'new_data';
+            console.log(obj2.property1);
+        </pre>
+    </p>
+  </details>
+
+
+  <details>
+    <summary>Program 37.  every and Some</summary>
+    <p>
+        <pre>
+            //every 
+            const ages = [32, 33, 16, 40];
+            ages.every(checkAge)
+            function checkAge(age) {
+              return age > 18;
+            }
+
+            //some
+            const ages = [3, 10, 18, 20];
+            const result = ages.some(checkAdult);
+            function checkAdult(age) {
+            return age > 18;
+            }
+            console.log(result)
+
+
+
+        </pre>
+    </p>
+  </details>
+
+  <details>
+    <summary>Program 38.  Create a From and get the data</summary>
+    <p>
+        <!-- <div class="form_wrapper">
+            <form class="" id="userForm">
+                <div class="form_filed">
+                        <input type="text" placeholder="Enter Name"  value="" onkeyup="myFunction()" name="userName"/>
+                </div>
+                <div class="form_filed">
+                    <input type="email" placeholder="Enter Email"  value="" name="userEmail"/>
+                </div>
+               <div class="form_filed">
+                    <select>
+                        <option selected="true" disabled>Select City</option>
+                        <option value="city 1">City 1</option>
+                        <option value="city 2">City 2</option>
+                    </select>
+                </div>
+        
+                <div class="form_filed">
+                    <input type="radio"  value="Male"  name="gender"/>Male
+                    <input type="radio"  value="Female"  name="gender"/>Female
+                </div>
+        
+                <div class="form_filed">
+                    <input type="checkbox"  value="agree"  name="true"/>I agree term and conditions
+                </div>    
+        
+                <button type="submit">Submit</button>
+            </form>
+        
+        </div> -->
+        
+        <pre>
+           
+            function myFunction(){
+                var name =    document.getElementById('userName').value;
+                var ele =    document.getElementById('fbutton');
+            
+            
+                if(name!=''){
+                    ele.removeAttribute("disabled");
+                }
+                else{
+                    ele.setAttribute('disabled','disabled')
+                }
+            }
+
+            var userForm = document.getElementById("userForm");
+                userForm.addEventListener('submit',function(e){
+            //  e.preventDefault();
+            var data   = new FormData(userForm).entries();
+            var result = JSON.stringify(Object.fromEntries(data));
+           
+            var finalResult = JSON.parse(result);
+            console.log(finalResult)    
+            })
+
+        </pre>
+    </p>
+  </details>
+
+  <details>
+    <summary>Program 39.  Create Box after a Box </summary>
+    <p>
+            <div class="wrap">
+                <span class="box" id="box1"> Box1</span>
+            </div>
+        
+        <pre>
+
+            for (i=0;i < 5;i++) {
+                var a =document.createElement(`span');
+                    a.setAttribute('class','box');
+                a.textContent =`Box ${i+1}`;
+                document.getElementById('box1').after(a);
+            }
+
+        </pre>
+    </p>
+  </details>
+
+
+  <details>
+    <summary>Program 39.  var  arr = [1,2,3,4,5] rotate array nth time</summary>
+    <p>
+        
+        <pre>
+        
+              var  arr = [1,2,3,4,5];
+                let n=3;
+                function arrsort(arr,n){
+                    for(let i=0; i < n; i++)
+                        {
+                                let lastItem = arr.pop();
+                                arr.unshift(lastItem)
+                                console.log(arr)
+                        }
+                }
+                console.log(arrsort(arr,n))
+          
+
+        </pre>
+    </p>
+  </details>
+
+
+
+
+  <details>
+    <summary>Program 40.  Short Program</summary>
+    <p>
+        
+        <pre>
+        
+            var arr = [1,2,3,4,5,6];
+            arr.length=4
+            console.log(arr)   // return 4 element in array
+            
+            
+            var arr = [1,2,3,4,5,6];
+            arr.length=0
+            console.log(arr) //Blank Array
+            
+            
+            var arr = ["20","50","50"]
+            var b = arr.map((item) =>{
+                return(parseInt(item))
+            } )
+            console.log(b)
+            
+            
+            var a = 123; //multiply by its own value 1 *1 2*2 3*3 (149)
+            var convertToString = a+"";
+            var narr = convertToString.split("");
+            var result= narr.map((item)=>{
+              return(
+              parseInt(item)*parseInt(item)
+              )
+              } 
+            )
+            console.log(result.join(''))
+
+
+            (function() {
+                console.log(1); 
+                setTimeout(function(){console.log(2)}, 1000); 
+                setTimeout(function(){console.log(3)}, 0); 
+                console.log(4);
+            })();  // 1 4 3 2
+
+        </pre>
+    </p>
+  </details>
+
+
+
+<details>
+    <summary>Program 40. What is  Currying</summary>
+    <p>
+        two ways to achieve that, firstly by using bind function and the second using the 
+        concept of closure. 
+        Currying in JavaScript is a process that allows you to transform a function with
+        multiple arguments into a sequence of nesting functions.
+        <pre>
+            //Bind Method 
+          var multiply = function(x,y){
+                console.log(x*y);
+             }
+          const multiplytwo = multiply.bind(this,2)
+          multiplytwo(2)
+      
+          const multiplythree = multiply.bind(this,2)
+          multiplytwo(3)
+        //Closure Method   
+        var multiply = function(x){
+              return function(y) {
+              console.log(x*y);
+            }
+        }
+        const multiplytwo = multiply(2)
+        multiplytwo(3)
+                <!-- function multi(x){
+                        return   function(y) {
+                            return function(z) {
+                            return function(a) {
+                                return   x*y*z*a
+                                }
+                            }
+                        }
+                    }
+          console.log(multi(1)(2)(3)(4))  -->
+        </pre>
+    </p>
+</details>
+
+
+<details>
+    <summary>Program 41. Array find the frequency of element const ar = [1, 2, 3, 4, 1, 2];</summary>
+    <p>
+        <pre>
+          const frequency = {};
+            for (let i = 0; i < ar.length; i++) {
+                let x = ar[i];
+                console.log(frequency[x] )
+            if (frequency[x] === undefined) {
+            frequency[x] = 1; // first occurrence
+            } else {
+            frequency[x] = frequency[x] + 1; // increment
+            }
+            }
+                console.log(frequency);
+        </pre>
+    </p>
+</details>
+
+
+
+<details>
+    <summary>Program 42. Array create chunk ->3   const ar = [1, 2, 3, 4, 5,6,8,9,4];</summary>
+    <p>
+        <pre>
+          const ar = [1, 2, 3, 4, 5,6,8,9,4];
+            const result = [];
+            let chunkSize=3;
+            for (let i = 0; i < ar.length; i =i+chunkSize) {
+                console.log(i)
+                const chunk = ar.slice(i,i+chunkSize)
+                result.push(chunk)
+            }
+            console.log(result);
+        </pre>
+    </p>
+</details>
+
+
+<details>
+    <summary>Program 43. Event Deligation Program</summary>
+    <p>
+        <pre>
+         <!----HTML--->
+            <!-- <ul class="category" id="itemCategory">
+            <li id="laptop">
+                Laptop
+            </li> 
+            <li id="camera">
+                Camera
+            </li> 
+            <li id="Bags">
+                Bags
+            </li> 
+        </ul> -->
+                 <!----HTML END--->
+        document.querySelector("#itemCategory").addEventListener('click',(e)=>{
+            console.log(e.target.id )
+        })
+        </pre>
+    </p>
+</details>
+
+
+
+<details>
+    <summary>Program 44 . Find Intersection in Arrays</summary>
+    <p>
+        <pre>
+        const array1 =[1,2,3,4,5];
+        const array2 =[4,5,6,7,8];
+        const array3 =[5,4,9,10,2];
+        const intersection=findIntersection(array1,array2,array3);
+        function findIntersection(...arrays){
+            
+            return arrays[0].filter(item=>arrays.every(arr=>arr.includes(item)));
+
+        }
+        console.log(intersection)
+        </pre>
+    </p>
+</details>
+
+<details>
+    <summary>Program 45 . Find missing number  in Arrays</summary>
+    <p>
+        <pre>
+            const arr = [1, 2,3, 4, 5, 6,8];
+            const n = arr.length + 1;
+            for (let i = 1; i <= arr.length; i++) {
+            if (!arr.includes(i)) {
+                console.log(i); // 3
+             }
+            }
+        </pre>
+    </p>
+</details>
+
+<details>
+    <summary>Program 46 .  handle multiple missing numbers (e.g., [1,4,5,7] → missing [2,3,6])?</summary>
+    <p>
+        <pre>
+          const arr = [1, 4, 5, 7];
+        // find the maximum value in array
+        const n = Math.max(...arr);
+
+        for (let i = 1; i <= n; i++) {
+        if (!arr.includes(i)) {
+            console.log(i); // 2, 3, 6
+        }
+        }
+        </pre>
+    </p>
+</details>
+
+
+<details>
+    <summary>Program 46 .  Find all pairs that sum to a given target.</summary>
+    <p>
+        <pre>
+          <!-- const arr = [2, 4, 3, 7, 1, 5];
+        const target = 6;
+        const pairs = [];
+        for (let i=0; i<arr.length; i++){
+            for (let j=i+1; j<arr.length; j++){
+            if(arr[i] + arr[j] === target){
+            pairs.push([arr[i], arr[j]]);
+            }
+        }
+        }
+        console.log(pairs); -->
+        </pre>
+    </p>
+</details>
+
+
+<details>
+    <summary>Program 47 .  Implement your own map() / filter() / reduce().</summary>
+    <p>
+        <pre>
+        function myMap(arr, callback) {
+        const result = [];
+        for (let i = 0; i < arr.length; i++) {
+            result.push(callback(arr[i], i, arr));
+        }
+        return result;
+        }
+
+        // Example:
+        const nums = [1, 2, 3];
+        const doubled = myMap(nums, (x) => x * 2);
+        console.log(doubled); // [2, 4, 6]
+
+        </pre>
+    </p>
+
+     <p>
+        <pre>
+        function myFilter(arr, callback) {
+        const result = [];
+        for (let i = 0; i < arr.length; i++) {
+            if (callback(arr[i], i, arr)) {
+            result.push(arr[i]);
+            }
+        }
+        return result;
+        }
+
+        // Example:
+        const nums = [1, 2, 3, 4];
+        const evens = myFilter(nums, (x) => x % 2 === 0);
+        console.log(evens); // [2, 4]
+
+        </pre>
+    </p>
+</details>
+
+<details>
+    <summary>Program 48 .  str1="abc" str2=123456 I want output a1b2c3456.</summary>
+    <p>
+        <pre>
+        function mergeStrings(s1, s2) {
+            let maxLen = Math.max(s1.length, s2.length);
+            let result = "";
+
+            for (let i = 0; i < maxLen; i++) {
+                if (s1[i]) result += s1[i];
+                if (s2[i]) result += s2[i];
+            }
+            return result;
+            }
+
+            console.log(mergeStrings("abc", "123456"));   // a1b2c3456
+            console.log(mergeStrings("abcdxyz", "123"));  // a1b2c3dxyz
+
+        </pre>
+
+        <pre>
+            let str1 = "abcdef";
+            let str2 = "123456";
+            let result = [...str1].map((ch, i) => ch + (str2[i] || "")).join("") + str2.slice(str1.length);
+            console.log(result); 
+        </pre>
+    </p>
+</details>
+// function test() {
+//     console.log(test.abc)
+// }
+
+
+// test()
+// test.abc=400;
+// test.abc=600;
+// test()
+
+
+// console.log({}=={})
+// console.log({}==={})
+
+// let a={
+//     name:"salil"
+// }
+// let b={...a}
+// b.name="Raja"
+
+// console.log(a.name)
+
+
+// let a=10;
+
+// let b=new Number(10);
+
+// let c=10;
+
+// console.log(a===b)
+// console.log(b===c)
+
+
+// console.log(+true)
+// console.log(!"test")
+
+<!-- 
+Implement your own map() / filter() / reduce().
+
+Rotate an array left/right by k steps.
+
+Find the maximum product subarray.
+
+Find the smallest positive missing number.
+
+Example: [0, -10, 1, 3, -20] → 2
+
+Find the equilibrium index (where left sum = right sum).
+
+
+
+
+Rearrange array elements so that positive and negative numbers alternate.
+
+Find the first non-repeating element in an array.
+
+Implement array chunking (split into groups of k).
+
+Sort an array of 0s, 1s, and 2s without using sort.
+
+Given an array of intervals, merge all overlapping intervals. -->
+
+
+
+<!-- forEach
+form -->
+
+
+
+<!-- https://bobbyhadz.com/blog/javascript-count-occurrences-of-each-element-in-array
+
+
+var arr = ['a', 'b', 'a', 'a', 'c', 'c'];
+
+var count = {};
+
+for (var element of arr) {
+  if (count[element]) {
+    count[element] += 1;
+  } else {
+    count[element] = 1;
+  }
+}
+
+console.log(count); // 👉️ {a: 3, b: 1, c: 2}
+
+console.log(count.a); // 👉️ 3
+console.log(count.b);  -->
+
+
+
+
+
+
+<!-- 
+<h1 id="1">React JS Program</h1>
+Make a automated time useing React Js
+   -->
+<div id="dd">
+    <user-card></user-card>
+</div>
+    <!-- <script src="./index.js"></> -->
+
+
+    <!-- <div class="form_wrapper" id="form_wrapper">
+        <form class="" id="userForm">
+            <div class="form_filed">
+                    <input type="text" placeholder="Enter Name"  value="" onkeyup="myFunction()" id="userName" name="userName"/>
+            </div>
+            <div class="form_filed">
+                <input type="email" placeholder="Enter Email"  value="" name="userEmail"/>
+            </div>
+           <div class="form_filed">
+                <select>
+                    <option selected="true" disabled>Select City</option>
+                    <option value="city 1">City 1</option>
+                    <option value="city 2">City 2</option>
+                </select>
+            </div>
+    
+            <div class="form_filed">
+                <input type="radio"  value="Male"  name="gender"/>Male
+                <input type="radio"  value="Female"  name="gender"/>Female
+            </div>
+    
+            <div class="form_filed">
+                <input type="checkbox"  value="agree"  name="true"/>I agree term and conditions
+              
+            </div>    
+    
+            <button type="submit" id="fbutton" disabled>Submit</button>
+
+            <button type="reset" id="freset" >Reset</button>
+        </form>
+    
+    </div> -->
+
+
+    <script>
+
+// document.getElementById("userForm").addEventListener('submit', function(e){
+//            e.preventDefault();
+          
+//             const formdata = new FormData(userForm).entries();
+
+//                 console.log(formdata)
+
+//         //     //  const formData = new FormData(contact_form).entries()
+ 
+          
+//            const formDetail=JSON.stringify(Object.fromEntries(formdata))
+           
+//             console.log(formDetail)
+           
+
+// })
+
+
+const url='https://the-little-dentist.ghost.io/ghost/api/v3/content/posts/?key=384e3da39c8d89b2b01207eb3f&limit=all&include=tags';
+                       
+//         fetch(url).then(response => response.json())
+//         .then(function(user){ console.log(user)})
+
+// console.log(promise);
+
+
+
+const getData = async function (){
+        const response = await fetch("https://the-little-dentist.ghost.io/ghost/api/v3/content/posts/?key=384e3da39c8d89b2b01207eb3f&limit=all&include=tags");
+        const data = response.json();              
+        return data;  
+}
+
+
+getData().then(itemData => {
+    console.log(itemData.posts)
+var tab = '';    
+// itemData.map((posts)=>{return posts.title})
+// for (let r of itemData.posts) {
+    //             tab += `<ul> 
+    //         <li>${r.id} </li>
+    //         <li>${r.title}</li>
+                    
+    //     </ul>`;
+    // }
+
+    // itemData.posts.map((item)=> {return item.title})
+    document.getElementById("itemCategory").innerHTML = tab;
+})
+
+
+
+
+
+
+// getapi(url)
+
+    // const data= promise.then(function(result){
+    //         console.log(result)
+    //         // console.log(JSON.stringify(result));
+    // })
+
+
+    // data.then(function(response){
+    //         console.log(response.json);
+    // })
+
+    // console.log(response.json);
+
+document.querySelector("#itemCategory").addEventListener('click',(e)=>{
+            console.log(e.target.id )
+            if(e.target.innerText=='Laptop'){
+                alert("Laptop")
+            }
+        })
+
+
+
+const data =  async()=> {
+        const getData = await fetch ('https://dummyjson.com/products/');
+        const  result = await getData.json();
+        return result;
+    }
+
+    data().then( (item)=>{
+        console.log('item',item.products)
+        item.products.map((item)=>{
+            console.log('title',item.title)
+        })
+    }
+    )
+
+
+var  arr = [1,2,3,4,5];
+var n=3;
+function arrsort(arr,n){
+    for(let i=0; i<n; i++){
+                let lastItem = arr.pop();
+                arr.unshift(lastItem)
+                console.log(arr)
+        }
+}
+
+console.log(arrsort(arr,n))
+
+
+
+var arr = ['aaa','bbb','ccc','aaa','ddd','ccc'];
+var item ={};
+
+for(var i=0;i<arr.length;i++){
+	
+        console.log(arr[i])		
+        let count = arr[i]
+    
+        if(item[count]){
+           item[count]= item[count]+1;
+        }
+    else{
+       item[count]=1;
+    }
+     console.log(item[count])
+}
+
+console.log(item)
+
+
+// When we talk about Controlled and Uncontrolled Components, it’s always referring to components which are handling forms or form inputs in them.
+
+//
+
+
+// let num ={
+//     a:100,
+//     b:200,
+//     title:"My Num"
+// }
+// multiplyNumeric(num)
+
+function myFunction(){
+    var name =    document.getElementById('userName').value;
+    var ele =    document.getElementById('fbutton');
+
+
+    if(name!=''){
+        ele.removeAttribute("disabled");
+    }
+    else{
+        ele.setAttribute('disabled','disabled')
+    }
+}
+
+document.getElementById('form_wrapper').style.backgroundColor='#fafafa';
+
+var userForm = document.getElementById("userForm");
+
+
+            userForm.addEventListener('submit',function(e){
+                  
+            //  e.preventDefault();
+            var data   = new FormData(userForm).entries();
+            var result = JSON.stringify(Object.fromEntries(data));
+           
+            var finalResult = JSON.parse(result);
+            console.log(finalResult)    
+            })
+
+
+
+            //add sum of the value  var a = 5231
+
+// let x= [1,2,3,5];
+
+// x.forEach((e)=>{
+
+//     if(e<3 || e===5) return;
+//     console.log(e)
+// })
+
+// let x= [1,2,3,5];
+
+// x.forEach((e)=>{
+
+//     if(e<3 || e===5) {
+//     return console.log(e)
+//     }
+// })
+
+
+// Promise.any  you care only about the fastest one to resolve.
+// Promise.race is similar to Promise.any except that it returns a promise that resolves or
+// rejects based on the fastest promise (given as input) that resolves or rejects.
+
+
+
+
+// Promise.all
+// The Promise.all method takes an array of promises and returns a single
+// promise that resolves to an array of the results of the input promises.
+
+
+// Promise.allSettled when
+// you do not care about the successful result of all promises.
+
+
+// What is Memoization?
+// In programming, memoization is an optimization technique that makes applications
+// more efficient and hence faster
+
+
+
+// Try Catch 
+// The try statement defines a code block to run (to try).
+// The catch statement defines a code block to handle any error.
+// The finally statement defines a code block to run regardless of the result.
+// The throw statement defines a custom error.
+
+
+// Event Deligation
+
+
+// hello’
+// Output {h: 1, e: 1, l: 2, o: 1}
+
+
+
+// let x1 = 21;
+// var abc = function () {
+//     console.log(x);
+//     let x = 20;
+// };
+// abc ();  
+
+
+
+// answer-  20 // 
+
+
+// var x = 21;
+// var abc = function () {
+//     console.log(x);
+//     var x = 20;
+// };
+// abc ();
+
+
+// const non_repeated_num = (nums) => {
+//    r = 0
+//    for(let i = 0; i <= nums.length; i++)
+//      {
+//        r = r ^ nums[i]
+//      }
+//     return r
+// }
+
+
+// nums = [1,2,3,4,3,2,1,4,5]
+
+// console.log(non_repeated_num(nums))
+
+// https://www.youtube.com/watch?v=TeG5oY3WDw4
+
+// React Reconcilation
+// React Fiber Architecture.
+
+
+
+//  Math.ceil() - rounds up to the closest integer 
+
+//  Math.floor() - rounds down to the closest integer 
+
+//  Math.round() - rounds up to the closest integer if the decimal is .5 or above; otherwise, rounds down to the closest integer 
+
+//  Math.trunc() - trims the decimal, leaving only the integer
+
+
+
+//  Math.pow(2,3) - calculates the number 2 to the power of 3, the result is 8 
+
+// Math.sqrt(16) - calculates the square root of 16, the result is 4 
+
+// Math.cbrt(8) - finds the cube root of 8, the result is 2 
+
+// Math.abs(-10) - returns the absolute value, the result is 10 
+
+// Logarithmic methods: Math.log(), Math.log2(), Math.log10() 
+
+// Return the minimum and maximum values of all the inputs: Math.min(9,8,7) returns 7, Math.max(9,8,7) returns 9.
+
+//  Trigonometric methods: Math.sin(), Math.cos(), Math.tan(), etc.
+
+
+
+// typeof of array is Object
+
+
+// Refernce Error
+// Syntax Error
+// Type error
+// Range Error
+
+//error handling useing try catch and 
+// Defensive Programing
+//Paradigms Programming
+
+
+
+
+// Because the console.log() function is built so as to not have the explicitly set return value, it gets the default return value of undefined.
+
+
+// Recursive function
+
+
+// let counter=3;
+
+// function example(){
+// console.log(counter);
+
+// counter=counter-1
+
+// if(counter===0) return;
+
+// example()
+// }
+
+
+// example();
+
+
+
+
+
+// Bellow Example not REcursion Programming function
+
+// function myDay() {
+//     console.log('Morning');
+//     console.log('Afternoon');
+//     console.log('Evening');
+//     myDay();
+// }
+
+
+// Recursive function
+// Avoid infinte loop
+
+
+
+
+
+
+
+// function addTwoNums(a, b) {
+//     console.log(a + b)
+// }
+
+// function randomNum() {
+//     return Math.floor((Math.random() * 10) + 1);
+// }
+// function specificNum() { return 42 };
+
+// var useRandom = true;
+
+// var getNumber;
+
+// if(useRandom) {
+//     getNumber = randomNum
+// } else {
+//     getNumber = specificNum
+// }
+
+// addTwoNums(getNumber(), getNumber())
+
+
+
+
+
+
+// Task 1: Build a function-based console log message generator
+// var txt = "Hello";
+// var color="red";
+// var fontSize="20px";
+// var background="black";
+
+// function consoleStyler(txt,color,fontSize,background) {
+//     console.log(`%c${txt}`,`color:${color};font-size:${fontSize};background:${background}`);
+// }
+
+// consoleStyler(txt, color, fontSize, background);
+
+// var reason = "champions";
+
+// var fontStyle="color: tomato; font-size: 50px";
+// // Task 2: Build another console log message generator
+// function celebrateStyler(reason) {
+//     if (reason == "birthday") {
+//             console.log(`%cHappy birthday`, fontStyle);
+//         }
+//     else if (reason == "champions") {
+//           console.log(`%cCongrats on the title!`, fontStyle);
+//     }
+//     else{
+//         console.log("False");
+//     }
+// }
+
+// celebrateStyler(reason);
+
+// // Task 3: Run both the consoleStyler and the celebrateStyler functions
+
+
+// // Task 4: Insert a congratulatory and custom message
+// function styleAndCelebrate() {
+    
+// }
+// // Call styleAndCelebrate
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Task 1: Build a function-based console log message generator
+
+
+function consoleStyler(txt,color,fontSize,background) {
+message = "%c" + txt;
+style = `color: ${color};`;
+style += `background: ${background};`;
+style += `font-size: ${fontSize};`;
+console.log(message,style)
+}
+
+
+
+
+var fontStyle = "color: tomato; font-size: 50px";
+
+// Task 2: Build another console log message generator
+function celebrateStyler(reason) {
+    fontStyle = "color: tomato; font-size: 50px";
+    if (reason == "birthday") {
+            console.log(`%cHappy birthday`, fontStyle);
+        }
+    else if (reason == "champions") {
+          console.log(`%cCongrats on the title!`, fontStyle);
+    }
+    else{
+       console.log(message, style);
+    }
+}
+
+
+
+
+
+// Task 3: Run both the consoleStyler and the celebrateStyler functions
+
+consoleStyler('Congrats!', '#ede6db', '40px', '#1d5c63');
+celebrateStyler('birthday');
+
+// Task 4: Insert a congratulatory and custom message
+function styleAndCelebrate() {
+    consoleStyler('You made it' , '#fae8eo', '30px', '#ef7c8e');
+     celebrateStyler('champions');
+}
+styleAndCelebrate()
