@@ -1,0 +1,1890 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JavaScript Interview Questions & Answers</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+      body {
+        margin: 0;
+        font-family: "Segoe UI", system-ui, sans-serif;
+        background: #f9fafb;
+        color: #111827;
+      }
+
+      header {
+        background: linear-gradient(135deg, #4f46e5, #6366f1);
+        color: #fff;
+        padding: 30px 20px;
+        text-align: center;
+      }
+
+      main {
+        max-width: 1200px;
+        margin: auto;
+        padding: 20px;
+      }
+
+      .accordion {
+        background: #fff;
+        border-radius: 10px;
+        margin-bottom: 12px;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+        overflow: hidden;
+      }
+
+      .accordion-header {
+        padding: 16px 20px;
+        cursor: pointer;
+        font-weight: 600;
+        background: #eef2ff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .accordion-header:hover {
+        background: #e0e7ff;
+      }
+
+      .accordion-content {
+        display: none;
+        padding: 16px 20px;
+      }
+
+      pre {
+        background: #0f172a;
+        color: #e5e7eb;
+        padding: 14px;
+        border-radius: 8px;
+        overflow-x: auto;
+        font-size: 0.85rem;
+        white-space: pre-line;
+      }
+
+      footer {
+        text-align: center;
+        padding: 20px;
+        color: #6b7280;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>JavaScript Interview Q&A</h1>
+      <p>Accordion-based revision notes (Arrays, Strings, Concepts)</p>
+    </header>
+
+    <main>
+      <!-- 1 -->
+ 
+      <div class="accordion">
+        <div class="accordion-header">
+          Array length const arr = [20,30,50,2,3] <span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+             const arr = [20,30,50,2,3]
+            console.log(arr.length)
+          </pre>
+        </div>
+      </div>
+
+
+      <div class="accordion">
+        <div class="accordion-header">
+           Last Elemnt const arr = [20,30,50,2,3] <span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+             const arr = [20,30,50,2,3]
+            const length = arr[arr.length-1]
+            console.log(length)
+          </pre>
+        </div>
+      </div>
+ 
+      <div class="accordion">
+        <div class="accordion-header">
+            Set Array acending and desending order const arr = [20,30,50,2,3] <span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+              // Ascending
+
+             const arr = [20,30,50,2,3]
+             const newarr  = arr.sort(function(a,b){return a-b})
+             console.log(newarr)
+             
+            // desending
+
+             const arr = [20,30,50,2,3]
+             const newarr  = arr.sort(function(a,b){return b-a})
+             console.log(newarr)
+          </pre>
+        </div>
+      </div>
+
+
+      <div class="accordion">
+        <div class="accordion-header">
+            Set Array alphabet order const cityarr = ["Amritsar","Delhi","Agra","Bhopal","Nagpur"] <span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+            const cityarr = ["Amritsar","Delhi","Agra","Bhopal","Nagpur"]
+            const newarr = cityarr.sort()
+            console.log(newarr)
+            console.log(newarr.reverse())
+          </pre>
+        </div>
+      </div>
+
+
+       <div class="accordion">
+        <div class="accordion-header">
+          Smallest String in Array cityarr = ["Amritsar","Delhi","Agra","Bhopal","Nagpur"] <span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+            var cityarr = ["Amritsar","Delhi","Agra","Bhopal","Nagpur"]
+            var smString= cityarr.reduce(function (a,b) { return a.length < b.length?  a :b   }   )           
+            console.log(smString)
+             console.log( Math.min(...citylist.map(o => o.length)))
+          </pre>
+        </div>
+      </div>
+
+
+       <div class="accordion">
+        <div class="accordion-header">
+          Print string length in place of city name cityarr = ["Amritsar","Delhi","Agra","Bhopal","Nagpur"] <span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+            const nameist = ["Amritsar","Delhi","Agra","Bhopal","Nagpur"]
+            const newarry=nameist.map((item)=>item.length)
+            console.log(newarry) 
+          </pre>
+        </div>
+      </div>
+
+
+       <div class="accordion">
+        <div class="accordion-header">
+          Remove 30 and 50 Elemnt from Array const arr =
+                [20,30,50,2,3] <span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+              const arr = [20,30,50,2,3]
+            console.log(arr.slice(1,3))
+
+             slice() — Does NOT Change the Original Array (Non-Mutating)
+
+                ✔ What it does:
+
+                Copies part of an array
+
+                Returns a new array
+
+                Original array remains unchanged
+          </pre>
+        </div>
+      </div>
+
+
+
+        <div class="accordion">
+        <div class="accordion-header">
+          Remove 30 and 50 and add 40,60 in place of that
+                Elemnt from Array const arr = [20,30,50,2,3]<span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+              const brr = [20,30,50,2,3]
+            console.log(brr.splice(1,2,40,60))
+            console.log(brr)
+
+            splice() — Changes the Original Array (Mutating)
+                What it does:
+                Adds, removes, or replaces items
+
+                Changes the original array
+          </pre>
+        </div>
+      </div>
+
+
+       <div class="accordion">
+        <div class="accordion-header">
+          Sum of array Array const arr =
+                [20,30,50,2,3]<span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+              const arr = [20,30,50,2,3]
+               arr.reduce(function (a,b) {
+                return a+b
+            })
+          </pre>
+        </div>
+      </div>
+
+
+         <div class="accordion">
+        <div class="accordion-header">
+          Call Objec Keys and Value Sepratly<span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+            userDetails ={
+                             name:"Salil Trivedi",
+                             age:28,
+                             mobile:9654847170,
+                             city:"Noida"
+                         }
+                 var b=Object.keys(userDetails)
+                 console.log(b)
+                 userDetails ={
+                             name:"Salil Trivedi",
+                             age:28,
+                             mobile:9654847170,
+                             city:"Noida"
+                         }
+                 var b=Object.values(userDetails)
+                 console.log(b)
+          </pre>
+        </div>
+      </div>
+
+
+
+        <div class="accordion">
+        <div class="accordion-header">
+          Delete Object Keys<span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+            userDetails ={
+                             name:"Salil Trivedi",
+                             age:28,
+                             mobile:9654847170,
+                             city:"Noida"
+                         }
+                
+                 delete userDetails.name
+                
+                 console.log(userDetails)
+          </pre>
+        </div>
+      </div>
+
+
+      <div class="accordion">
+        <div class="accordion-header">
+         Add dynamic property in object<span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+               const property ="firstName"
+             const name="Salil Trivedi"
+            
+             const user ={
+                     [property]:name
+             }
+            
+             console.log(user)
+          </pre>
+        </div>
+      </div>
+
+
+      <div class="accordion">
+        <div class="accordion-header">
+         How do you check if an object has a property in JavaScript?<span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>userDetails.hasOwnProperty('name')</pre>
+        </div>
+      </div>
+
+
+      <div class="accordion">
+        <div class="accordion-header">
+         Object Key and Value itreate for in loop<span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre> const user ={
+                 firstName:"Salil",
+                 lastName:"Trivedi",
+                 age:20
+             }
+             for(key in user){
+                 console.log(user[key])
+                 console.log(key)
+             }</pre>
+        </div>
+      </div>
+
+
+
+
+       <div class="accordion">
+        <div class="accordion-header">
+         Object Freeze<span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre> 
+            const obj1 = { property1: 'initial_data' };
+            const obj2 = Object.freeze(obj1);
+            obj2.property1 = 'new_data';
+            console.log(obj2.property1);
+          </pre>
+        </div>
+      </div>
+
+
+
+
+      <div class="accordion">
+        <div class="accordion-header">
+         Call , Apply and Bind<span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>  user1={
+                         name:"Salil ",
+                         age:28,
+                         mobile:9654847170,
+                         city:"Noida"
+                     }
+
+             const printFullName= function(lname){
+                   return  this.name+ ' '+ lname +' ' +this.city
+             }
+             user2={
+                         name:"Nivedita",
+                         age:26,
+                         mobile:9654847170,
+                         city:"Noida"
+                     }        
+
+             console.log(printFullName.call(user1,"Trivedi"))
+             console.log(printFullName.apply(user2,["Kumari"]))
+             const newUser= printFullName.bind(user1,"Trivedi")
+             console.log(newUser())
+
+
+
+             user1={
+                         name:"Salil ",
+                         age:28,
+                         mobile:9654847170,
+                         city:"Noida"
+                     }
+
+             const printFullName= function(lname){
+                   return  this.name+ ' '+ lname +' ' +this.city
+             }
+             user2={
+                         name:"Nivedita",
+                         age:26,
+                         mobile:9654847170,
+                         city:"Noida"
+                     }        
+
+             console.log(printFullName.call(user1,"Trivedi"))
+             console.log(printFullName.apply(user2,["Kumari"]))
+             const newUser= printFullName.bind(user1,"Trivedi")
+             console.log(newUser())
+        </pre>
+        </div>
+      </div>
+
+
+
+
+
+
+      <div class="accordion">
+        <div class="accordion-header">
+          Find Longest Word in Sentence <span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+          const x = "this is your good time start";
+          const arr= x.split(" ")
+          const longWord= Math.max(...arr.map((item)=>item.length));
+          const result =arr.filter((item)=>item.length==longWord)
+          console.log(result)
+
+
+          or
+
+          const x = "this is your good time start";
+          const arr= x.split(" ")
+          let longest="";
+          for(let word of arr){
+              if(word.length>longest.length){
+                  longest=word
+              }
+          }
+          console.log(longest)
+</pre
+          >
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="accordion">
+        <div class="accordion-header">
+          Remove Duplicates from Array with Set and without Set <span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+// Using Set
+console.log([...new Set([1,2,1,3,2,4])]);
+
+// Without Set
+const arr = [1,2,1,3,2,4];
+let unique = [];
+for (let n of arr) {
+  if (!unique.includes(n)) unique.push(n);
+}
+console.log(unique);
+</pre
+          >
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="accordion">
+        <div class="accordion-header">
+          Palindrome String Check <span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+const str = "madam";
+const rev = str.split("").reverse().join("");
+console.log(str === rev ? "Palindrome" : "Not Palindrome");
+</pre
+          >
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="accordion">
+        <div class="accordion-header">
+          Reverse String (Without Built-in) <span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+          const str="Hello"
+          const newArr= str.split("")
+          const newSet=[];
+
+          for(i=newArr.length-1;i>=0;i--){
+              newSet.push(newArr[i])
+          }
+          console.log(newSet.join(""))
+        </pre
+          >
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="accordion">
+        <div class="accordion-header">
+          Sort Array const arr =[20,11,1,9,30,4,5] with Sort and without
+          Sort<span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre></pre>
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">Find prime number <span>+</span></div>
+        <div class="accordion-content">
+          <pre>
+              const arr = 5
+              function isPrime(num) {
+                if (num < = 1) return false;
+
+                for (let i = 2; i < = Math.sqrt(num); i++) {
+                  if (num % i === 0) return false;
+                }
+
+                return true;
+              }
+              console.log(isPrime(arr))
+
+
+              OR
+
+              const arr = [2, 1, 3, 4, 5, 6, 7];
+
+              function isPrime(num) {
+                if (num <= 1) return false;
+
+                for (let i = 2; i <= Math.sqrt(num); i++) {
+                  if (num % i === 0) return false;
+                }
+
+                return true;
+              }
+
+              const primeNumbers = arr.filter(isPrime);
+
+              console.log(primeNumbers);
+
+              </pre
+          >
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">Pattern Program<span>+</span></div>
+        <div class="accordion-content">
+          <pre>
+                *
+                **
+                ***
+                ****
+                *****
+
+                let pattern = "";
+
+                  for (let i = 1; i < = 5; i++) {
+                    pattern += "*".repeat(i) + "\n";
+                  }
+
+                  console.log(pattern);
+
+                OR
+                
+                let pattern = "";
+
+                for (let i = 1; i < = 5; i++) {        // rows
+                  for (let j = 1; j < = i; j++) {      // columns / stars
+                    pattern += "*";
+                  }
+                  pattern += "\n";                     // new line after each row
+                }
+
+                console.log(pattern);
+
+                let rows = 5;      // number of rows
+                let pattern = "";
+                for (let i = 1; i <= rows; i++) {          // each row
+                  // 1️⃣ Add spaces (rows - i)
+                  for (let j = 1; j <= rows - i; j++) {
+                    pattern += " ";
+                  }
+                  
+                  // 2️⃣ Add stars (2*i - 1)
+                  for (let k = 1; k <= 2 * i - 1; k++) {
+                    pattern += "*";
+                  }
+                  
+                  // 3️⃣ New line
+                  pattern += "\n";
+                }
+
+                console.log(pattern);
+
+
+              </pre
+          >
+        </div>
+      </div>
+
+      <!-- 6 -->
+      <div class="accordion">
+        <div class="accordion-header">
+          Largest Element in Array with in built method and without inbuilt
+          method <span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+          const arr = [2,4,7,3,8,1]
+          console.log(Math.max(...arr))
+
+          Or
+
+          let newArr = arr[0];
+          for(let i=0;i < arr.length;i++){
+              if(arr[i]>newArr){
+              newArr= arr[i]
+              }
+          }
+
+          console.log(newArr)
+          </pre>
+        </div>
+      </div>
+
+      <!-- 7 -->
+      <div class="accordion">
+        <div class="accordion-header">
+          Flatten Nested Array with inbuilt method and without inbuilt
+          <span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+            <code>
+            function flatten(arr, res = []) {
+              for (let i of arr) {
+                Array.isArray(i) ? flatten(i, res) : res.push(i);
+              }
+              return res;
+            }
+            console.log(flatten([1,[2,[3,4]],5]));
+
+            const arr = [1,[2,[3,4]],5];
+            function flaten(arr, res = []) {
+              for (let i = 0; i < arr.length; i++) {
+                if (Array.isArray(arr[i])) {
+                  flaten(arr[i], res);
+                } else {
+                  res.push(arr[i]);
+                }
+              }
+              return res;
+            }
+
+            flatten([1, [2, [3, 4], 5]])
+            │
+            ├─ 1 → push → res=[1]
+            └─ [2, [3,4],5] → flatten([2, [3,4],5])
+                │
+                ├─ 2 → push → res=[1,2]
+                ├─ [3,4] → flatten([3,4])
+                │     ├─ 3 → push → res=[1,2,3]
+                │     └─ 4 → push → res=[1,2,3,4]
+                └─ 5 → push → res=[1,2,3,4,5]
+            </code>
+          </pre>
+        </div>
+      </div>
+
+      <!-- 8 -->
+      <div class="accordion">
+        <div class="accordion-header">
+          Array find the frequency of element <span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre><code>
+         const arr = [1, 2, 3, 4, 1, 2];
+          const freq={}
+          for(let i= 0;i < arr.length;i++){
+              let x = arr[i];
+              if(freq[x] == undefined){
+                  freq[x]=1;
+              }
+              else{
+                  freq[x]=freq[x]+1;
+              }
+          }
+          console.log(freq)
+                
+             </code>
+            </pre>
+        </div>
+      </div>
+
+      <!-- 9 -->
+      <div class="accordion">
+        <div class="accordion-header">
+          Second Largest Element or Second Highest Element <span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+            const arr =[5,4,9,10,2] 
+            let max=-Infinity;
+            let secondMax=-Infinity;
+            for(let i=0;i < arr.length;i++){
+                if(arr[i]>max){
+                    secondMax=max;
+                    max=arr[i]
+                }
+                else if (arr[i] > secondMax && arr[i] !== max) {
+                    secondMax = arr[i];
+                }
+            }
+            console.log(secondMax)
+            </pre
+          >
+        </div>
+      </div>
+
+      <!-- 10 -->
+      <div class="accordion">
+        <div class="accordion-header">
+          Rotate Array Nth Times <span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+        const arr = [1,2,3,4,5] 
+        let rotate =3;
+        const newArr=[];
+        for(let i=0;i < rotate;i++){
+            let n=arr.pop()
+            arr.unshift(n)
+            console.log(arr)
+        }
+        </pre
+          >
+        </div>
+      </div>
+
+      <!-- 11 -->
+      <div class="accordion">
+        <div class="accordion-header">Chunk Array <span>+</span></div>
+        <div class="accordion-content">
+          <pre>
+          const ar = [1, 2, 3, 4, 5,6,8,9,4];
+          let chunk=3;
+          let newArr=[]
+          for(let i=0;i < ar.length;i=i+chunk){
+              const n= ar.slice(i,i+chunk);
+              newArr.push(n);
+          }
+          console.log(newArr)
+          </pre>
+        </div>
+      </div>
+
+      <!-- 12 -->
+      <div class="accordion">
+        <div class="accordion-header">Array Intersection <span>+</span></div>
+        <div class="accordion-content">
+          <pre>
+            const array1 =[1,2,3,4,5];
+            const array2 =[4,5,6,7,8];
+            const array3 =[5,4,9,10,2];
+
+            function intersection(...arrays){
+                console.log(arrays)
+            const intersection=
+            arrays[0].filter((item)=>arrays.every((arr)=>arr.includes(item)))    
+                    return intersection
+            }
+
+            console.log(intersection(array1,array2,array3))
+          </pre>
+        </div>
+      </div>
+
+      <!-- 13 -->
+      <div class="accordion">
+        <div class="accordion-header">
+          Find missing number in Arrays Handle multiple missing numbers (e.g.,
+          [1,4,5,7] → missing [2,3,6]) <span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+            function findMissingNumber(arrays){
+                const min= Math.min(...arrays)
+                const max= Math.max(...arrays)
+                let newArr=[]
+                for(let i=min;i<=max;i++){
+                    if(!arrays.includes(i)){
+                        newArr.push(i)
+                    }
+                }
+                  return newArr;
+            }
+            console.log(findMissingNumber([1,3,5,7]))
+          </pre>
+        </div>
+      </div>
+
+      <!-- 14 -->
+      <div class="accordion">
+        <div class="accordion-header">
+          Merge Two Strings Alternately Input str1="abc" str2="123456" I want
+          output a1b2c3456.<span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+        const str1="abc" 
+        const str2="123456"
+        const len= Math.min(str1.length,str2.length);
+        const s1= str1.split("")
+        const s2= str2.split("")
+        let newStr=""
+        for(let i=0;i < s1.length;i++){
+            newStr +=s1[i]+s2[i]
+        }
+        console.log(newStr+str2.slice(len))
+        </pre
+          >
+        </div>
+      </div>
+
+      <!-- 15 -->
+      <div class="accordion">
+        <div class="accordion-header">
+          Find all pairs that sum to a given target. <span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+             const arr = [2, 4, 3, 7, 1, 5];
+                    const target = 6; 
+                    const pairs = [];
+                    for (let i=0; i < arr.length; i++){
+                        for (let j=i+1; j < arr.length; j++){
+                        if(arr[i] + arr[j] === target){
+                        pairs.push([arr[i], arr[j]]);
+                        }
+                  }
+                }
+              console.log(pairs);
+            </pre
+          >
+        </div>
+      </div>
+
+      <!-- 16 -->
+      <div class="accordion">
+        <div class="accordion-header">Reverse Sentence <span>+</span></div>
+        <div class="accordion-content">
+          <pre>
+            const str="JavaScript is this world Hello"
+            const strArr= str.split(" ");
+            let newArr=[]
+            for(let i=strArr.length-1;i>=0;i--){
+                let n = strArr.pop()
+                newArr.push(n)
+            }
+            console.log(newArr)
+            </pre
+          >
+        </div>
+      </div>
+
+      <!-- 17 -->
+      <div class="accordion">
+        <div class="accordion-header">
+          Most Repeating Element <span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+                const arr = [1, 3, 2, 1, 4, 1, 3, 3, 3];
+                let maxcount=0;
+                let freq={},maxrepeat;
+                for(let i=0;i < arr.length;i++){
+                    let x=arr[i]
+                    
+                    if(freq[x]==undefined){
+                        freq[x]=1
+                    }
+                    else{
+                        freq[x] =freq[x]+1
+                    }
+                    if(freq[x]>maxcount){
+                    maxcount=freq[x];
+                    maxrepeat=x
+                  }
+                }
+                console.log(maxrepeat)
+            </pre
+          >
+        </div>
+      </div>
+
+      <!-- 18 -->
+      <div class="accordion">
+        <div class="accordion-header">Check Anagrams <span>+</span></div>
+        <div class="accordion-content">
+          <pre>
+        function areAnagrams(str1, str2) {
+          // Remove spaces and convert to lowercase
+          const s1 = str1.toLowerCase().split('').sort().join('');
+          const s2 = str2.toLowerCase().split('').sort().join('');
+
+          return s1 === s2;
+        }
+
+        console.log(areAnagrams("listen", "silent")); // true
+
+        or
+        function areAnagrams(str1, str2) {
+          if (str1.length !== str2.length) return false;
+
+          const count = {};
+
+          for (let char of str1) {
+            count[char] = (count[char] || 0) + 1;
+          }
+
+          for (let char of str2) {
+            if (!count[char]) return false;
+            count[char]--;
+          }
+
+          return true;
+        }
+
+        console.log(areAnagrams("listen", "silent")); // true
+
+</pre
+          >
+        </div>
+      </div>
+
+      <!-- 19 -->
+      <div class="accordion">
+        <div class="accordion-header">Group Object by City <span>+</span></div>
+        <div class="accordion-content">
+          <pre>
+          const arr = [  {name:"Salil",city:"Kanpur"},
+            {name:"Nivedita",city:"Delhi"},
+            {name:"lucky",city:"Kanpur"}];
+
+          const freq={};
+          for(let i=0;i < arr.length;i++){
+                  let x=arr[i].city ;
+                  if (!freq[x]) {
+                      freq[x] = [];
+                    }
+                freq[x].push(arr[i]);
+          }
+          console.log(freq)
+
+          Or
+
+          const grouped = arr.reduce((acc, cur) => {
+            acc[cur.city] = acc[cur.city] || [];
+            acc[cur.city].push(cur);
+            return acc;
+          }, {});
+
+          console.log(grouped);
+          </pre>
+        </div>
+      </div>
+
+      <!-- 20 -->
+      <div class="accordion">
+        <div class="accordion-header">
+          Promise Example with Catch <span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+            A Promise represents the eventual completion or failure of an asynchronous operation.
+
+          States:
+
+          Pending
+
+          Fulfilled
+
+          Rejected
+
+          Why do we need Promises?
+
+Avoid callback hell
+
+Better error handling
+
+Cleaner async code
+
+          function checkNumber(num) {
+            return new Promise((resolve, reject) => {
+              if (num > 0) {
+                resolve("Number is positive");
+              } else {
+                reject("Number is not positive");
+              }
+            });
+          }
+
+          // Using the promise
+          checkNumber(5)
+            .then(result => {
+              console.log(result); // Number is positive
+            })
+            .catch(error => {
+              console.log(error);
+            });
+
+            Or 
+
+            // Using the promise with fetch 
+
+            function fetchData() {
+              return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                  resolve("Data fetched successfully");
+                }, 2000);
+              });
+            }
+
+            fetchData()
+              .then(data => console.log(data))
+              .catch(err => console.log(err));
+
+          </pre>
+        </div>
+      </div>
+
+      <!-- 21 -->
+      <div class="accordion">
+        <div class="accordion-header">
+          Event Loop Explanation <span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+console.log("start");
+setTimeout(() => console.log("timeout"), 0);
+Promise.resolve().then(() => console.log("promise"));
+console.log("end");
+
+
+JavaScript is single-threaded, meaning it can do one thing at a time.
+
+The Event Loop manages:
+Call Stack → where code is executed
+Web APIs → browser features like setTimeout
+Task Queues
+Microtask Queue (Promises)
+Macrotask Queue (setTimeout, setInterval)
+👉 Rule:
+Microtasks always run before macrotasks.
+
+Key Takeaways
+JavaScript executes synchronous code first
+Promises (microtasks) run before setTimeout (macrotasks)
+setTimeout(..., 0) does not mean “run immediately”
+
+// Output:
+// start
+// end
+// promise
+// timeout
+</pre
+          >
+        </div>
+      </div>
+
+      <!-- 22 -->
+      <div class="accordion">
+        <div class="accordion-header">
+          Exaplain and fix the var vs let in setTimeout <span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+for (var i = 0; i < 3; i++) {
+  setTimeout(() => console.log(i), 1000);
+}
+// Fix: use let
+
+OR Immediate function
+
+for (var i = 0; i < 3; i++) {
+  (function(j) {
+    setTimeout(() => console.log(j), 1000);
+  })(i);
+}
+
+Key takeaway (interview-friendly)
+
+var is function-scoped, so async callbacks share one variable.
+let is block-scoped, so each loop iteration gets its own binding.
+</pre
+          >
+        </div>
+      </div>
+
+      <!-- 23 -->
+      <div class="accordion">
+        <div class="accordion-header">== vs === Difference <span>+</span></div>
+        <div class="accordion-content">
+          <pre>
+          5 == "5"        // true  (string → number)
+          0 == false     // true  (false → 0)
+          "" == false    // true  ("" → 0)
+          null == undefined // true
+          === (Strict Equality)
+          5 === "5"      // false
+          0 === false   // false
+          null === undefined // false
+          </pre>
+        </div>
+      </div>
+
+      <!-- 24 -->
+      <div class="accordion">
+        <div class="accordion-header">
+          Predict output (Loss of this Context) <span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+const obj = {
+  name: "JS",
+  getName() {
+    return this.name;
+  }
+};
+
+const fn = obj.getName;
+console.log(fn()); // undefined
+
+const bound = obj.getName.bind(obj);
+console.log(bound());
+
+
+Why does this happen?
+getName() uses this.name
+When called as obj.getName(), this refers to obj
+But here you do: const fn = obj.getName;
+
+This is called loss of context.
+Use bind() (most common)
+ const fn = obj.getName.bind(obj);
+console.log(fn());
+
+this depends on how a function is called, not where it is defined.
+Arrow functions don’t have their own this; they inherit it from the surrounding scope.
+</pre
+          >
+        </div>
+      </div>
+
+      <!-- 25 -->
+      <div class="accordion">
+        <div class="accordion-header">
+          What is output console.log([1,2] + [3,4]); <span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+            + operator with arrays
+              In JavaScript, when you use + with non-numbers, it performs string concatenation.
+              Arrays are objects, so JavaScript converts them to strings.
+
+              JavaScript does not merge arrays using +.
+            </pre
+          >
+        </div>
+      </div>
+
+      <!-- 26 -->
+      <div class="accordion">
+        <div class="accordion-header">
+          Write a function that swaps the first two elements in a given array
+          (solve with destructing) <span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+           function swapFirstTwo([first, second, ...rest]) {
+                return [second, first, ...rest];
+            }
+
+            const array = [3, 5, 1, 4, 2];
+            console.log(swapFirstTwo(array));  // [5, 3, 1, 4, 2]
+            </pre
+          >
+        </div>
+      </div>
+
+      <!-- 27 -->
+      <div class="accordion">
+        <div class="accordion-header">
+          Diffrence between undefined and null <span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+            Undefined variables are variables that the developer has declared but not yet assigned a value.
+     
+            A null variable is a variable or property that is empty. You use null variables when you want to show that a variable has no values or want to clear the value of a variable.
+            </pre
+          >
+        </div>
+      </div>
+
+      <!-- 28 -->
+      <div class="accordion">
+        <div class="accordion-header">
+          Find Second smallest element in array [30,2,4,3,5] <span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+
+            const arr = [30, 2, 4, 3, 5];
+
+              let smallest = Infinity;
+              let secondSmallest = Infinity;
+
+              for (let i = 0; i < arr.length; i++) {
+                  if (arr[i] < smallest) {
+                      secondSmallest = smallest;
+                      smallest = arr[i];
+                  } else if (arr[i] > smallest && arr[i] < secondSmallest) {
+                      secondSmallest = arr[i];
+                  }
+              }
+
+            console.log(secondSmallest); // 3
+
+          </pre>
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">
+          Remove Falsy value from array <span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+            const arr=[1,2,3,true,false,0,undefined,4,5];
+            console.log(arr.filter(Boolean))
+          </pre>
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">Union of Two Arrays<span>+</span></div>
+        <div class="accordion-content">
+          <pre>
+        const arr1=[1,2,3,4,5,6]
+        const arr2=[20,30,2,1,3,8]
+        const arr=[...arr1,...arr2]
+        console.log([...new Set(arr)])</pre
+          >
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">
+          First non repeating elment in array<span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+            const arr=[1,2,3,2,1,5,6,6,3,2];
+            const freq={};
+            let num
+            for(let i=0;i < arr.length;i++){
+                let x=arr[i];
+                if(freq[x]==undefined){
+                    freq[x]=1;
+                }
+                else{
+                    freq[x]=freq[x]+1;
+                }
+                
+            }
+
+            for (let i = 0; i < arr.length; i++) {
+                if (freq[arr[i]] === 1) {
+                    num = arr[i];
+                    break;
+                }
+            }
+                console.log(freq)  
+                
+                console.log(num)
+          </pre>
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">Seprate Even and Odd<span>+</span></div>
+        <div class="accordion-content">
+          <pre>
+            const arr=[1,2,3,4,5,6,7,8,9,10,13,12];
+
+              const freq={even:[],odd:[]}
+
+              for(let i=0;i < arr.length;i++){
+                  arr[i]%2 = = 0 ? freq.even.push(arr[i]):freq.odd.push(arr[i])
+              }
+
+              console.log(freq)
+          </pre>
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">Convert Map to Object<span>+</span></div>
+        <div class="accordion-content">
+          <pre>
+ Recommended approach
+              const map = new Map([
+                  ['a', 1],
+                  ['b', 2],
+                  ['c', 3]
+                ]);
+
+                const obj = Object.fromEntries(map);
+                console.log(obj);
+
+                Or
+                (Useful when combining with other properties)
+                const obj = { ...Object.fromEntries(map) };
+
+
+            </pre
+          >
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">
+          Clone array without refernce<span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+              const arr = [2,1,3,4,5,6];
+              const newArr= [...arr];
+              newArr.push(9)
+              console.log(newArr)
+
+
+              Or 
+
+              // Method 2: slice()
+              const copy2 = original.slice();
+
+              // Method 3: Array.from()
+              const copy3 = Array.from(original);
+            </pre
+          >
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">
+          Convert Object to Key–Value Array | Object.entries ExplainedConvert
+          Object to Key–Value Array | Object.entries Explained<span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+              | Method                 | Purpose                  |
+              | ---------------------- | ------------------------ |
+              | `Object.entries()`     | Object → key–value array |
+              | `Object.keys()`        | Keys only                |
+              | `Object.values()`      | Values only              |
+              | `Object.fromEntries()` | Array → object           |
+
+            </pre
+          >
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">
+          Check object is empty or not<span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+              const obj = {};
+              Object.keys(obj).length === 0
+
+            </pre
+          >
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">
+          Optional Chaining opertor exaplian with example<span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+              The optional chaining operator (?.) lets you safely access properties, methods, or array items without causing an error if something is null or undefined.
+
+              Instead of your code crashing, it returns undefined.
+
+              Problem Without Optional Chaining
+              const user = {};
+
+              console.log(user.profile.name); 
+              // ❌ TypeError: Cannot read properties of undefined
+
+
+              Solution Using Optional Chaining
+              const user = {};
+
+              console.log(user.profile?.name); 
+              // ✅ undefined (no error)
+
+
+              Call Methods Safely
+              const user = {
+                greet() {
+                  return "Hello!";
+                }
+              };
+
+              console.log(user.greet?.());   // "Hello!"
+              console.log(user.sayHi?.());   // undefined
+
+            </pre
+          >
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">
+          Destructructing object with default value<span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+              Object Destructuring with Default Values in JavaScript
+
+              Destructuring lets you extract properties from an object into variables.
+              Default values are used when a property is undefined.
+
+
+              const user = {
+                name: "Alex"
+              };
+
+              const { name, age = 18 } = user;
+
+              console.log(name); // "Alex"
+              console.log(age);  // 18 (default value)
+
+            </pre
+          >
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">
+          Copy Object without refrence<span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+              To copy an object without reference means creating a new object in memory, so changes to the copy do not affect the original.
+
+              Shallow Copy (Most Common)
+              Spread Operator (Best for simple objects)
+              const obj1 = { name: "Alex", age: 20 };
+              const obj2 = { ...obj1 };
+
+              obj2.age = 25;
+
+              console.log(obj1.age); // 20 ✅
+
+
+              OR 
+
+              const obj2 = Object.assign({}, obj1);
+
+
+              Deep Copy (No Shared Reference)
+             
+              JSON Method (Simple, but limited)
+              
+               const obj2 = JSON.parse(JSON.stringify(obj1));
+
+               OR
+
+              structuredClone() (Modern & Best)
+              const obj2 = structuredClone(obj1);
+            </pre
+          >
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">
+          Pure Function VS Impure Function with example<span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+              A pure function:
+              Always returns the same output for the same input
+              Does not modify external state (no side effects)
+
+              Example:-
+              function add(a, b) {
+                return a + b;
+              }
+
+              add(2, 3); // 5
+              add(2, 3); // 5 (always same result)
+
+              An impure function:
+              Uses or modifies external state
+              Produces different outputs for the same input
+              Has side effects
+
+
+              let count = 0;
+
+              function increment() {
+                count++;
+                return count;
+              }
+              increment(); // 1
+              increment(); // 2 (different result)
+              </pre
+          >
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">
+          console.log(10 ** 0); // what is outout and why<span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+              Because any number raised to the power 0 is always 1.
+              This is a mathematical rule, not just JavaScript.
+
+              ✅ Math Rule
+              a⁰ = 1      (for any non-zero number a)
+              </pre
+          >
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">
+          console.log([1,2]+[3,4]) Why Output:- console.log((1,2,3,4))<span
+            >+</span
+          >
+        </div>
+        <div class="accordion-content">
+          <pre></pre>
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">
+          Find Common Elements in Two Arrays in js. / Intersection in js<span
+            >+</span
+          >
+        </div>
+        <div class="accordion-content">
+          <pre>
+                const arr1=[1,2,3,5,6];
+                const arr2=[2,3,4,6,4,1];
+                console.log(arr1.filter((item)=>arr2.includes(item)))
+              </pre
+          >
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">
+          Sum values inside nested objects<span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+               Sum values inside nested objects
+const arr = [
+  { name: "A", items: [10, 20] },
+  { name: "B", items: [5, 15] }
+];
+
+
+
+const total = arr.flatMap(item => item.items).reduce((a, b) => a + b, 0);
+
+console.log(total)
+              </pre
+          >
+        </div>
+      </div>
+
+
+      <div class="accordion">
+        <div class="accordion-header">
+          What is promise chaining? <span>+</span>
+        </div>
+        <div class="accordion-content">
+            <pre>
+                Sum values inside nested objects
+                const arr = [
+                  { name: "A", items: [10, 20] },
+                  { name: "B", items: [5, 15] }
+                ];
+                const total = arr.flatMap(item => item.items).reduce((a, b) => a + b, 0);
+                console.log(total)
+              </pre>
+        </div>
+      </div>
+
+
+      <div class="accordion">
+        <div class="accordion-header">
+         Group items by a property <span>+</span>
+        </div>
+        <div class="accordion-content">
+            <pre>
+               const arr = [
+                { name: "A", dept: "IT" },
+                { name: "B", dept: "HR" },
+                { name: "C", dept: "IT" }
+              ];
+
+              const dept={}
+
+              for(let i=0; i < arr.length; i++){
+                  let  department =arr[i].dept;
+                  
+                  if(!dept[department]){
+                      dept[department] =[]
+                  }
+                  dept[department].push(arr[i])
+              }
+
+              console.log(dept)
+              </pre>
+        </div>
+      </div>
+
+
+      <div class="accordion">
+        <div class="accordion-header">
+         Merege two arrays of object <span>+</span>
+        </div>
+        <div class="accordion-content">
+            <pre>
+               const arr1 = [
+                { id: 1, name: "Alice" },
+                { id: 2, name: "Bob" }
+              ];
+
+              const arr2 = [
+                { id: 2, age: 25 },
+                { id: 3, name: "Charlie", age: 30 }
+              ];
+              const merged = [
+                ...arr1.map(item => ({
+                  ...item,
+                  ...arr2.find(x => x.id === item.id)
+                })),
+                ...arr2.filter(item => !arr1.some(x => x.id === item.id))
+              ];
+
+              console.log(merged);
+              </pre>
+        </div>
+      </div>
+
+
+       <div class="accordion">
+        <div class="accordion-header">
+        sum(1)(2)(3)(4)()<span>+</span>
+        </div>
+        <div class="accordion-content">
+            <pre>
+             let sum=function (a){
+            return function(b){
+                if(b!==undefined){
+                    return sum(a+b)
+                }
+                return a
+            }
+}
+console.log(sum(1)(2)(3)(4)())
+
+
+
+“When sum(1) is called, a becomes 1.
+sum(1)(2) creates a new closure with a = 3.
+sum(1)(2)(3) creates another closure with a = 6.
+This continues until we call the function with no argument (), which returns the final sum.”
+
+
+Explain why closure is important
+
+“Closure allows each returned function to remember the current value of a even after 
+the outer function has finished execution.
+Without closure, we couldn’t preserve the running total across calls.”
+
+
+Explain the stopping condition (important!)
+
+“JavaScript cannot automatically know when to stop accepting arguments, so I explicitly stop the chain when the argument is undefined by calling the function with empty parentheses.”
+
+
+
+This is a curried sum function using closures. Each call stores the current total in a closure and returns another function. The chain ends when the function is called without arguments, at which point it returns the accumulated sum.”
+              </pre>
+        </div>
+      </div>
+
+
+
+        <div class="accordion">
+        <div class="accordion-header">
+      Currying Function with bind and closure<span>+</span>
+        </div>
+        <div class="accordion-content">
+              <pre>
+                With bind Example:-
+
+                  let multiply =function(x,y){
+                          return x*y
+                  }
+
+                  let multiplyTwo = multiply.bind(this,4)
+
+                  console.log(multiplyTwo(3))
+
+                With Clousre Example  
+
+
+                        let multiply =function(x){
+                            return function (y){
+                              return  x*y
+                            }
+                    }
+
+                    let multiplyTwo = multiply(4)
+
+                    console.log(multiplyTwo(2))
+
+              </pre>
+        </div>
+      </div>
+
+
+
+    </main>
+
+<!-- 
+
+    1. Cookies 🍪
+What they are
+
+Small pieces of data stored in the browser
+
+Automatically sent to the server with every HTTP request
+
+Often used for authentication, tracking, or preferences
+
+Key points
+
+Max size: ~4 KB
+
+Can have an expiration date
+
+Accessible by both server and client (unless HttpOnly)
+
+Slower (sent with every request)
+
+
+
+2. localStorage 📦
+What it is
+
+Stores data in the browser with no expiration
+
+Data stays even after the browser is closed
+
+Used for long-term data (theme, language, user settings)
+
+Key points
+
+Max size: ~5–10 MB
+
+Data is stored as key–value pairs (strings)
+
+Not sent to the server
+
+Persists until manually cleared
+
+
+3. sessionStorage 🕒
+What it is
+
+Stores data only for the current browser tab/session
+
+Data is deleted when the tab or browser is closed
+
+Used for temporary data (form steps, one-time flags)
+
+Key points
+
+Max size: ~5 MB
+
+Key–value pairs (strings)
+
+Not sent to the server
+
+Unique per tab
+
+
+
+Cookies → Authentication, server-side needs
+
+localStorage → Persistent user preferences
+
+sessionStorage → Temporary session data -->
+
+
+
+
+
+    <footer>📘 JavaScript Interview Accordion Notes</footer>
+
+    <script>
+      document.querySelectorAll(".accordion-header").forEach((header) => {
+        header.addEventListener("click", () => {
+          const content = header.nextElementSibling;
+          const icon = header.querySelector("span");
+          content.style.display =
+            content.style.display === "block" ? "none" : "block";
+          icon.textContent = icon.textContent === "+" ? "−" : "+";
+        });
+      });
+    </script>
+  </body>
+</html>
+
+<!-- Explain different ways to sort an array in descending order and show each with a code example.
+
+Method 1: Using sort() with a Compare Function
+
+The sort() method can take a compare function that defines the sort order.
+
+const arr = [3, 1, 4, 2, 5];
+arr.sort((a, b) => b - a);
+console.log(arr); // Output: [5, 4, 3, 2, 1]
+The compare function (a, b) => b - a sorts the array in descending numerical order.
+This method sorts the array in place, modifying the original array.
+Method 2: Using Spread Operator and sort()
+
+To avoid mutating the original array, you can create a copy using the spread operator and then sort it.
+
+const arr = [3, 1, 4, 2, 5];
+const sortedArr = [...arr].sort((a, b) => b - a);
+console.log(sortedArr); // Output: [5, 4, 3, 2, 1]
+console.log(arr);       // Original array remains unchanged
+[...arr] creates a shallow copy of the original array.
+Sorting the copied array does not affect the original array.
+Method 3: Using slice() and sort()
+
+Get Irmak Esin’s stories in your inbox
+Join Medium for free to get updates from this writer.
+
+Enter your email
+Subscribe
+Another way to copy the array before sorting is using the slice() method.
+
+const arr = [3, 1, 4, 2, 5];
+const sortedArr = arr.slice().sort((a, b) => b - a);
+console.log(sortedArr); // Output: [5, 4, 3, 2, 1]
+console.log(arr);       // Original array remains unchanged
+arr.slice() creates a shallow copy of the array.
+The copied array is then sorted without modifying the original array.
+Method 4: Using Array.from() and sort()
+
+You can also use Array.from() to create a copy before sorting.
+
+const arr = [3, 1, 4, 2, 5];
+const sortedArr = Array.from(arr).sort((a, b) => b - a);
+console.log(sortedArr); // Output: [5, 4, 3, 2, 1]
+console.log(arr);       // Original array remains unchanged 
+
+-->

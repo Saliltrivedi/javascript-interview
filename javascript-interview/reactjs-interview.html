@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>React js Interview Questions & Answers</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+      body {
+        margin: 0;
+        font-family: "Segoe UI", system-ui, sans-serif;
+        background: #f9fafb;
+        color: #111827;
+      }
+
+      header {
+        background: linear-gradient(135deg, #4f46e5, #6366f1);
+        color: #fff;
+        padding: 30px 20px;
+        text-align: center;
+      }
+
+      main {
+        max-width: 1200px;
+        margin: auto;
+        padding: 20px;
+      }
+
+      .accordion {
+        background: #fff;
+        border-radius: 10px;
+        margin-bottom: 12px;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+        overflow: hidden;
+      }
+
+      .accordion-header {
+        padding: 16px 20px;
+        cursor: pointer;
+        font-weight: 600;
+        background: #eef2ff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .accordion-header:hover {
+        background: #e0e7ff;
+      }
+
+      .accordion-content {
+        display: none;
+        padding: 16px 20px;
+      }
+
+      pre {
+        background: #0f172a;
+        color: #e5e7eb;
+        padding: 14px;
+        border-radius: 8px;
+        overflow-x: auto;
+        font-size: 0.85rem;
+        white-space: pre-line;
+      }
+
+      footer {
+        text-align: center;
+        padding: 20px;
+        color: #6b7280;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>React Js  Interview Q&A</h1>
+      <p>Accordion-based revision notes</p>
+    </header>
+
+    <main>
+      <!-- 1 -->
+      <div class="accordion">
+        <div class="accordion-header">
+          What is React js <span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+        React.js is a JavaScript library used for building user interfaces (UI), especially for single-page applications (SPAs) where the page doesn’t reload every time you interact with it.
+
+        Key Features of React
+        -Component-Based Architecture
+        -Virtual Dom
+        -JSX (JavaScript XML)
+        -Unidirectional Data Flow (partent to child)
+        -Reusable Components
+        -React Hooks (Modern feature)
+        </pre>
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">
+          What is Virtual Dom <span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+        The Virtual DOM (VDOM) is a lightweight, in-memory copy of the real DOM (Document Object Model).
+        React keeps a virtual representation of the UI in memory.
+
+        When something changes (like data or user input), React updates the Virtual DOM first instead of directly touching the real DOM.
+
+        Then, React figures out the minimal changes needed and updates only those parts in the real DOM.
+
+        This process is called reconciliation.
+        </pre>
+        </div>
+      </div>
+
+
+      <div class="accordion">
+        <div class="accordion-header">
+          Why Virtual DOM is Used <span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+        Directly updating the real DOM is slow because the browser has to recalculate styles, re-render elements, and repaint the page.
+
+        By using a Virtual DOM:
+
+        React minimizes expensive DOM operations.
+
+        Makes apps faster and smoother.
+        </pre>
+        </div>
+      </div>
+
+
+        <div class="accordion">
+        <div class="accordion-header">
+          What is JSX <span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+            It is a syntax extension of JavaScript.
+
+            JSX allows you to write HTML-like code inside JavaScript.
+
+            Browsers cannot understand JSX directly, so React transpiles it into regular JavaScript (using tools like Babel) before running it in the browser.
+
+            JSX lets you write HTML inside JavaScript in a way that React can understand and render efficiently. It’s not mandatory, but it makes React code cleaner and easier to read.
+        </pre>
+        </div>
+      </div>
+
+
+       <div class="accordion">
+        <div class="accordion-header">
+          What is Props <span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+          “Props” (short for “properties”) are read‑only inputs passed from parent components to child
+          components. Props allow components to be dynamic and reusable.
+          Example:
+          <Child name="Alice" age={30} />
+        </pre>
+        </div>
+      </div>
+
+       <div class="accordion">
+        <div class="accordion-header">
+          What is Default Props <span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+            export default function Child({ name = 'Lucky' }) {
+            return <> Name: {name}. </>;
+          }
+        </pre>
+        </div>
+      </div>
+
+       <div class="accordion">
+        <div class="accordion-header">
+          What is state in React <span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+            State is internal data managed by a component. It represents information that may change over
+            time. When state changes, React triggers a re-render to update the UI accordingly.    
+           </pre>
+        </div>
+      </div>
+
+
+       <div class="accordion">
+        <div class="accordion-header">
+         Diffrence between Props and State <span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+            ● Props: passed from parent to child, read-only, immutable within child component.
+           
+            ● State: managed inside component, mutable, used to hold data that can change (via setState or
+            hooks).
+           </pre>
+        </div>
+      </div>
+
+
+       <div class="accordion">
+        <div class="accordion-header">
+         Diffrence between Props and State <span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+            ● Props: passed from parent to child, read-only, immutable within child component.
+           
+            ● State: managed inside component, mutable, used to hold data that can change (via setState or
+            hooks).
+           </pre>
+        </div>
+      </div>
+
+      
+       <div class="accordion">
+        <div class="accordion-header">
+        Call Function with argument <span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+            You need to pass a function reference to onClick, not the result of a function call.
+
+            Use an arrow function
+            <!-- <button onClick={ () => handleSum(2, 4) }>Sum</button> -->
+            Option 2: Bind the function (less common in functional components)
+
+        <!-- <button onClick =  {handleSum.bind(null , 2 , 4 ) }>Sum</button> -->
+
+
+            Note:Whenever you see alerts or console logs happening immediately, check if you are accidentally calling the function instead of passing a reference.
+
+           </pre>
+        </div>
+      </div>
+
+       <div class="accordion">
+        <div class="accordion-header">
+          What are Hooks in React  <span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+            Hooks are special functions that let functional components “hook into” React features such as state, lifecycle, context, and more. Hooks let you use these features without writing class components.
+           </pre>
+        </div>
+      </div>
+
+
+        <div class="accordion">
+        <div class="accordion-header">
+          What is conditional rendering in React?  <span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+            Conditional rendering means showing different UI based on some condition. You can use JavaScript operators inside JSX.
+
+             {isLoggedIn ? <Dashboard /> : <Login />}
+
+             Key Points:
+
+              Conditional rendering works just like normal JS conditions.
+
+              Can use if-else, ternary (? :), logical AND (&&), switch, or IIFE.
+
+              Useful to show/hide components dynamically based on state, props, or API responses.
+           </pre>
+        </div>
+      </div>
+
+
+      <div class="accordion">
+        <div class="accordion-header">
+          What is list rendering in React? How to display arrays of items?  <span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+            Use JavaScript's map() (or similar) to iterate over an array and return JSX for each item. Each item must have a unique key prop.
+            Example:
+            users.map(user => (
+            <li key={user.id}>{user.name}</li>
+            ))
+           </pre>
+           </div>
+      </div>
+
+       <div class="accordion">
+        <div class="accordion-header">
+          What is the key prop and why is it important?  <span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+           key is a special attribute you must include when creating lists of elements. It helps React identify
+          which items have changed, been added, or removed — improving performance and preventing bugs. Keys
+          should be stable and unique (e.g., item IDs).
+           </pre>
+           </div>
+      </div>
+
+
+      <div class="accordion">
+        <div class="accordion-header">
+          What is a controlled component?  <span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+           A controlled component is a form element (input, textarea, etc.) whose 
+           value is controlled by React state. The displayed value always matches the state.
+
+           Example:
+           <!-- <input value={name} onChange={ e = > setName(e.target.value)} /> -->
+           </pre>
+           </div>
+      </div>
+
+       <div class="accordion">
+        <div class="accordion-header">
+          What is an uncontrolled component?  <span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+           A controlled component is a form element (input, textarea, etc.) whose 
+           value is controlled by React state. The displayed value always matches the state.
+
+           <!-- Example:
+           <input value={name} onChange={ e = > setName(e.target.value)} /> -->
+           An uncontrolled component is a form element that maintains its own internal state. You access value
+using refs instead of React state. Less common in modern React.
+           </pre>
+           </div>
+      </div>
+
+
+       <div class="accordion">
+        <div class="accordion-header">
+           What is a fragment in React?  <span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+           A fragment (<React.Fragment> or shorthand ) lets you group a list of children without
+adding extra nodes to the DOM. Useful when returning multiple elements from a component.
+        
+           </pre>
+           </div>
+      </div>
+
+
+   
+       <div class="accordion">
+        <div class="accordion-header">
+           What is lifting state up?  <span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+         “Lifting state up” means moving the state to a common parent component so that the state can be
+          shared by multiple child components. It helps when sibling components need to access or modify the same data.
+           </pre>
+           </div>
+      </div>
+
+       <div class="accordion">
+        <div class="accordion-header">
+         What is useEffect <span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+        useEffect is a Hook for performing side effects in functional components — like fetching data,
+        setting up subscriptions or timers, manually manipulating the DOM, etc. It runs after the component renders.
+
+        useEffect replaces:
+
+        componentDidMount
+
+        componentDidUpdate
+
+        componentWillUnmount
+
+        Example:
+        useEffect(() => {
+        // side effect code
+      }, [dependencies]);
+           </pre>
+           </div>
+      </div>
+
+        <div class="accordion">
+        <div class="accordion-header">
+         What is memoization in React? (e.g., React.memo, useMemo) <span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+         Memoization helps avoid unnecessary re-renders or expensive computations.
+        ● React.memo — wraps a component to skip re-render if props don’t change.
+        ● useMemo — memoizes a computed value between renders until dependencies change.
+           </pre>
+           </div>
+      </div>
+
+   
+
+     <div class="accordion">
+        <div class="accordion-header">
+         What is useRef and forwardRef <span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+              useRef returns a mutable ref object — often used to:
+              ● hold references to DOM elements
+              ● store mutable values that don’t trigger re-renders when changed
+
+              forwardRef
+              ● Parent wants direct access to child DOM
+              ● Simple cases like focus, scroll, highlight
+
+              useImperativeHandle lets you expose ONLY what you want.
+           </pre>
+           </div>
+      </div>
+
+
+      <div class="accordion">
+        <div class="accordion-header">
+         What is useImperativeHandle<span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+             With forwardRef, parent can access everything on the DOM.
+             That breaks encapsulation ❌
+
+             👉 useImperativeHandle lets you expose ONLY what you want.
+
+             Child Component
+             import React, { forwardRef, useImperativeHandle, useRef } from 'react';
+
+            const Child = forwardRef((props, ref) => {
+              const inputRef = useRef();
+
+              useImperativeHandle(ref, () => ({
+                focusInput() {
+                  inputRef.current.focus();
+                },
+                changeBorder() {
+                  inputRef.current.style.borderColor = 'red';
+                }
+              }));
+
+              return <input ref={inputRef} placeholder="Child Input" />;
+            });
+
+            export default Child;
+
+
+            <!-- import React, { useRef } from 'react';
+            import Child from './Child';
+
+            function Parent() {
+              const childRef = useRef(null);
+
+              return (
+                <>
+                  <Child ref={childRef} />
+
+                  <button onClick={ () = > childRef.current.focusInput()}>
+                    Focus Child
+                  </button>
+
+                  <button onClick={ () => childRef.current.changeBorder()}>
+                    Change Border
+                  </button>
+                </>
+              );
+            }
+
+            export default Parent; -->
+
+            Parent cannot access DOM directly
+
+            Parent can only call:
+
+            focusInput()
+
+            changeBorder()
+
+            Cleaner, safer, recommended
+
+           </pre>
+           </div>
+      </div>
+      
+      <div class="accordion">
+        <div class="accordion-header">
+         What is error boundary? <span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+        Error boundaries are React components that catch JavaScript errors in their child component tree,
+log them, and display a fallback UI instead of crashing the entire app. Only class components can be error
+boundaries (as of now).
+           </pre>
+           </div>
+      </div>
+
+
+        <div class="accordion">
+        <div class="accordion-header">
+         What is a custom hook? <span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+      A custom hook is a function whose name starts with use and may call other hooks. It helps you
+reuse stateful logic across components.
+
+Why Use Custom Hooks?
+
+✅ Avoid code duplication
+✅ Cleaner components
+✅ Better maintainability
+✅ Reusable logic
+
+
+import { useState } from 'react';
+
+function useCounter(initialValue = 0) {
+  const [count, setCount] = useState(initialValue);
+
+  const increment = () => setCount(count + 1);
+  const decrement = () => setCount(count - 1);
+  const reset = () => setCount(initialValue);
+
+  return { count, increment, decrement, reset };
+}
+
+export default useCounter;
+
+
+import React from 'react';
+import useCounter from './useCounter';
+
+function Counter() {
+  const { count, increment, decrement, reset } = useCounter(10);
+
+  return (
+    <div>
+      <h2>Count: {count}</h2>
+      <button onClick={increment}>+</button>
+      <button onClick={decrement}>-</button>
+      <button onClick={reset}>Reset</button>
+    </div>
+  );
+}
+
+export default Counter;
+
+           </pre>
+           </div>
+      </div>
+
+
+        <div class="accordion">
+        <div class="accordion-header">
+         What is the difference between useEffect and
+useLayoutEffect? <span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+            : Both run side-effects, 
+
+● useEffect runs after the browser paints the screen (asynchronously)
+
+● useLayoutEffect runs synchronously before the browser paints — useful for reading layout and
+synchronously re-rendering.
+
+useLayoutEffect:- Before paint, DOM measurements, layout changes
+
+React docs recommend: “Prefer useEffect unless you need layout measurements.”
+
+Example
+        <!-- import { useLayoutEffect, useRef, useState } from "react";
+
+        function Box() {
+          const boxRef = useRef(null);
+          const [width, setWidth] = useState(0);
+
+          useLayoutEffect(() => {
+            const rect = boxRef.current.getBoundingClientRect();
+            setWidth(rect.width);
+          }, []);
+
+          return (
+            <div>
+              <div
+                ref={boxRef}
+                style= {{ width: "50%", height: 100, background: "lightblue" }}
+              />
+              <p>Box width: {width}px</p>
+            </div>
+          );
+        }
+
+        export default Box; -->
+
+           </pre>
+           </div>
+      </div>
+
+
+       <div class="accordion">
+        <div class="accordion-header">
+        What is strict mode in React? <span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+            <React.StrictMode> is a wrapper that helps highlight potential problems in an 
+              application (like deprecated APIs, side-effects), especially during development. 
+              It does not affect production build.
+           </pre>
+           </div>
+      </div>
+
+
+      <div class="accordion">
+        <div class="accordion-header">
+        What is a Suspense and code splitting? <span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+            Using React.lazy() + Suspense, you can lazily load components so parts of the app are loaded
+            only when needed — reducing initial bundle size and improving performance.
+            Example:
+            const LazyComponent = React.lazy(() => import('
+            ./MyComponent'));
+            <!-- <Suspense fallback= { <div> Loading...</div> } >
+            <LazyComponent />
+            </Suspense> -->
+           </pre>
+           </div>
+      </div>
+
+
+      <div class="accordion">
+        <div class="accordion-header">
+        What is a props drilling? <span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+            Prop drilling is passing props through many nested components to reach a deeply nested child. It
+            can make code messy. To avoid:
+            ● use React Context
+            ● use state management libraries (Redux / Zustand / etc.)
+            ● restructure components
+           </pre>
+           </div>
+      </div>
+
+
+         <div class="accordion">
+        <div class="accordion-header">
+        What is a useEffect  Cleanup Function? <span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+            A cleanup function is a function that React calls before the component unmounts or 
+            before the effect runs again (on dependency change). It’s used to:
+
+            Remove event listeners
+
+            Clear timers (setTimeout, setInterval)
+
+            Cancel subscriptions or network requests
+
+            Prevent memory leaks
+
+            Example:
+
+            import { useEffect, useState } from "react";
+
+            function Timer() {
+              const [count, setCount] = useState(0);
+
+              useEffect(() => {
+                // Side effect: set up an interval
+                const intervalId = setInterval(() => {
+                  setCount(c => c + 1);
+                }, 1000);
+
+                // Cleanup function
+                return () => {
+                  clearInterval(intervalId);
+                  console.log("Cleanup: interval cleared");
+                };
+              }, []); // empty dependency = runs once on mount
+
+              return <h1>Count: {count}</h1>;
+            }
+
+            export default Timer;
+
+
+            With dependencies
+            useEffect(() => {
+              console.log("Effect ran: count =", count);
+
+              return () => {
+                console.log("Cleanup before next effect: count =", count);
+              };
+            }, [count]);
+
+
+            The cleanup runs before the next effect whenever count changes.
+
+            Then the new effect runs.
+
+           </pre>
+           </div>
+      </div>
+
+
+       <div class="accordion">
+        <div class="accordion-header">
+        Atomic design in React <span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+            Atomic Design is a methodology for structuring UI components by breaking them down into small, reusable pieces and composing them into more complex interfaces. In React, it maps very naturally to a component-driven architecture.
+
+            The five levels of Atomic Design
+            Atoms → Molecules → Organisms → Templates → Pages
+
+            1. Atoms
+
+            Smallest, indivisible UI elements
+
+            Examples:
+
+            Buttons
+
+            Inputs
+
+            Labels
+
+            Icons
+
+
+            2. Molecules
+
+          Combinations of atoms that form a simple unit
+
+          Examples:
+
+          Search input + button
+
+          Label + input
+
+          Icon + text
+
+
+        3. Organisms
+
+        Relatively complex UI sections
+
+        Examples:
+
+        Header
+
+        Navbar
+
+        Product card list
+
+        Login form
+
+       4 Templates
+
+        Layout-focused structures
+
+        Examples:
+
+        Page layout
+
+        Grid systems
+
+        Sidebar + content layout
+
+       5 Pages
+
+        Concrete implementations with real data
+
+        Examples:
+
+        Login page
+
+        Product page
+
+        Dashboard page
+
+           </pre>
+           </div>
+      </div>
+
+
+       <div class="accordion">
+        <div class="accordion-header">
+       Explain React Fiber <span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+          
+           </pre>
+           </div>
+      </div>
+
+
+      <div class="accordion">
+        <div class="accordion-header">
+      How does React handle priority updates? <span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+            React handles priority updates through its Fiber scheduler, which decides what to render first, what can wait, and what can be interrupted. This system is what enables Concurrent React.
+
+            Why priorities exist
+
+          Not all updates are equal:
+
+          Typing into an input → must be immediate
+
+          Filtering a huge list → can wait
+
+          Prefetching data → low priority
+
+          Without priorities, expensive updates would block the UI.
+
+          The core idea
+
+          React assigns a priority to every state update and schedules work accordingly.
+
+
+          The Scheduler:
+          Chooses which Fiber to work on
+          Based on priority lanes
+          Cooperates with the browser (yields to paint/input)
+
+          | Priority   | Lane type             | Example            |
+          | ---------- | --------------------- | ------------------ |
+          | Sync       | `SyncLane`            | Click, typing      |
+          | Input      | `InputContinuousLane` | Scroll, drag       |
+          | Default    | `DefaultLane`         | Data updates       |
+          | Transition | `TransitionLane`      | Filtering, sorting |
+          | Idle       | `IdleLane`            | Background work    |
+
+          React prioritizes updates using lanes and Fiber scheduling, ensuring urgent updates are fast and non-urgent work doesn’t block the UI.
+           </pre>
+           </div>
+      </div>
+
+       <div class="accordion">
+        <div class="accordion-header">
+    How do you prevent unnecessary re-renders?<span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+           Preventing unnecessary re-renders in React is about controlling when components update and keeping props/state stable. Here’s a practical, real-world guide—from most impactful to more situational techniques.
+
+
+            1. Use React.memo for pure components
+            ✅ Prevents re-render when props haven’t changed
+            2. Use stable keys in lists
+            Unstable keys force React to throw away and recreate components.
+            3. Memoize callbacks with useCallback
+            Inline functions create new references every render.
+            4. Memoize derived data with useMemo
+            Avoid recomputing expensive values on every render.
+            5. Avoid inline objects and arrays in props
+            <!-- // ❌ New object every render
+            <Component style={{ margin: 10 }} />
+
+            // ✅ Stable reference
+            const style = useMemo(() => ({ margin: 10 }), []);
+            <Component style={style} /> -->
+            6. Split components by responsibility
+            Large components cause widespread re-renders.
+
+            Prevent re-renders by preventing unnecessary prop changes.
+           </pre>
+           </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">
+    What is PropType checking in React?<span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+           PropTypes (via prop-types package) let you specify runtime type-checking of props. 
+           Helps catch bugs early by ensuring props passed to components match expected types:
+            
+           MyComponent.propTypes = {
+            name: PropTypes.string.isRequired,
+            age: PropTypes.number
+            };
+           </pre>
+           </div>
+      </div>
+
+
+    </main>
+
+    <footer>📘 React js Interview Accordion Notes</footer>
+
+    <script>
+      document.querySelectorAll(".accordion-header").forEach((header) => {
+        header.addEventListener("click", () => {
+          const content = header.nextElementSibling;
+          const icon = header.querySelector("span");
+          content.style.display =
+            content.style.display === "block" ? "none" : "block";
+          icon.textContent = icon.textContent === "+" ? "−" : "+";
+        });
+      });
+    </script>
+  </body>
+</html>

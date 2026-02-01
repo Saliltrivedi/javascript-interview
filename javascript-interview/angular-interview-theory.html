@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Angular Interview Questions & Answers</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+      body {
+        margin: 0;
+        font-family: "Segoe UI", system-ui, sans-serif;
+        background: #f9fafb;
+        color: #111827;
+      }
+
+      header {
+        background: linear-gradient(135deg, #4f46e5, #6366f1);
+        color: #fff;
+        padding: 30px 20px;
+        text-align: center;
+      }
+
+      main {
+        max-width: 1200px;
+        margin: auto;
+        padding: 20px;
+      }
+
+      .accordion {
+        background: #fff;
+        border-radius: 10px;
+        margin-bottom: 12px;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+        overflow: hidden;
+      }
+
+      .accordion-header {
+        padding: 16px 20px;
+        cursor: pointer;
+        font-weight: 600;
+        background: #eef2ff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .accordion-header:hover {
+        background: #e0e7ff;
+      }
+
+      .accordion-content {
+        display: none;
+        padding: 16px 20px;
+      }
+
+      pre {
+        background: #0f172a;
+        color: #e5e7eb;
+        padding: 14px;
+        border-radius: 8px;
+        overflow-x: auto;
+        font-size: 0.85rem;
+        white-space: pre-line;
+      }
+
+      footer {
+        text-align: center;
+        padding: 20px;
+        color: #6b7280;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Angular Interview Q&A</h1>
+      <p>Angular Theory Interview Question Answers</p>
+    </header>
+
+    <main>
+      <!-- 1 -->
+      <div class="accordion">
+        <div class="accordion-header">What is Angular? <span>+</span></div>
+        <div class="accordion-content">
+          <pre>
+                Angular is a TypeScript-based frontend framework developed by Google for building single-page applications (SPAs) using component-based architecture.
+              </pre
+          >
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">
+          Difference between Angular and AngularJS <span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+                | AngularJS                  | Angular                     |
+                | -------------------------- | --------------------------- |
+                | JavaScript                 | TypeScript                  |
+                | MVC                        | Component-based             |
+                | Two-way binding everywhere | Controlled change detection |
+                | Slower                     | Faster & scalable           |
+
+                </pre
+          >
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">
+          Explain Angular Architecture <span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+                -> Modules
+                -> Components
+                -> Templates
+                -> Services
+                -> Dependency Injection
+                -> Routing
+                </pre
+          >
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">What is NgModule? <span>+</span></div>
+        <div class="accordion-content">
+          <pre>
+                It groups related components, directives, pipes, and services into a cohesive block
+                </pre
+          >
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">What is NgModule? <span>+</span></div>
+        <div class="accordion-content">
+          <pre>
+                It groups related components, directives, pipes, and services into a cohesive block
+                </pre
+          >
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">
+          Constructor vs ngOnInit <span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+               -> Constructor: Dependency injection
+               -> ngOnInit: Component initialization logic
+           </pre
+          >
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">Lifecycle Hooks <span>+</span></div>
+        <div class="accordion-content">
+          <pre>
+               Common hooks:
+
+                ngOnInit – Runs once after the component is initialized; used for initial data loading.
+                           Call API to load data when component loads
+
+                ngOnChanges – Runs whenever an input property changes; used to react to input updates.
+                              Update UI when parent passes new data
+
+                ngAfterViewInit – Runs after the component’s view and child views are fully initialized.
+                                  Access ViewChild or manipulate DOM
+
+                ngOnDestroy – Runs just before the component is destroyed; used for cleanup like unsubscribing.
+                            Unsubscribe from observables or clear timers
+
+            | Hook                                  | When It Runs                                                                | Use Case                                              |
+            | ------------------------------------- | --------------------------------------------------------------------------- | ----------------------------------------------------- |
+            | `ngOnChanges(changes: SimpleChanges)` | Called **when an input property changes** (before `ngOnInit`)               | React to `@Input()` changes                           |
+            | `ngOnInit()`                          | Called **once after first `ngOnChanges`**                                   | Initialize component, fetch data                      |
+            | `ngDoCheck()`                         | Called **during every change detection cycle**                              | Detect/act on changes manually                        |
+            | `ngAfterContentInit()`                | Called **after content (ng-content) is projected**                          | Access projected content                              |
+            | `ngAfterContentChecked()`             | Called **after every check of projected content**                           | Custom content change detection                       |
+            | `ngAfterViewInit()`                   | Called **after component’s view (template + child components) initialized** | Access `@ViewChild`/`@ViewChildren` safely            |
+            | `ngAfterViewChecked()`                | Called **after every check of the component’s view**                        | Detect changes in child components                    |
+            | `ngOnDestroy()`                       | Called **just before component is destroyed**                               | Cleanup subscriptions, timers, detach event listeners |
+
+
+
+              </pre
+          >
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">Types of Data Binding <span>+</span></div>
+        <div class="accordion-content">
+          <pre>
+            ->  Interpolation {{ }}
+
+            ->  Property binding [property]
+
+            ->  Event binding (event)
+
+            ->  Two-way binding [(ngModel)]
+
+
+            Note:Give Example also
+              </pre
+          >
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">@Input vs @Output <span>+</span></div>
+        <div class="accordion-content">
+          <pre>
+            ->  @Input → Parent to child
+
+            ->  @Output → Child to parent using EventEmitter
+
+            Note:Give Example also
+              </pre
+          >
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">ViewEncapsulation <span>+</span></div>
+        <div class="accordion-content">
+          <pre>
+            Controls how a component’s CSS styles are applied and scoped.
+
+            Emulated (default) – Styles are scoped to the component by adding unique attributes (prevents style leakage).
+
+            None – Styles are global and apply to the entire application.
+
+            ShadowDom – Uses the browser’s native Shadow DOM to strictly isolate component styles.
+
+
+
+            When to Use
+
+            Emulated – Most cases (safe and default)
+
+            None – Shared/global styling (themes, layouts)
+
+            ShadowDom – Web components or strict style isolation
+
+
+            | Type                   | CSS Scope      | Style Leakage | Uses Shadow DOM | Use Case             |
+            | ---------------------- | -------------- | ------------- | --------------- | -------------------- |
+            | **Emulated** (default) | Component only | ❌ No          | ❌ No            | Normal Angular apps  |
+            | **None**               | Global         | ✅ Yes         | ❌ No            | Global themes/layout |
+            | **ShadowDom**          | Component only | ❌ No          | ✅ Yes           | Web components       |
+
+
+
+            import { Component, ViewEncapsulation } from '@angular/core';
+            @Component({
+              selector: 'app-example',
+              template: `<h1> Hello </h1>`,
+              styles: [`h1 { color: red; }`],
+              encapsulation: ViewEncapsulation.Emulated
+            })
+            export class ExampleComponent {}
+
+              </pre>
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">
+          Sibling Component Communication <span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+            ->  Shared service
+            A shared service is used to share data or communicate between multiple components without a direct parent–child relationship.
+
+            ->    Subject / BehaviorSubject
+            Subject – Emits data only to subscribers after they subscribe
+
+            BehaviorSubject – Stores the latest value and emits it immediately to new subscribers
+            Note:Give Example also
+
+
+              </pre
+          >
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">
+          Difference between Subject and BehaviorSubject in RxJS? <span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+            ->Subject → doesn’t store previous value.
+            ->BehaviorSubject → stores last emitted value.
+              </pre
+          >
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">
+          ChangeDetectionStrategy.OnPush <span>+</span>
+        </div>
+        <div class="accordion-content">
+          <p>
+            ChangeDetectionStrategy.OnPush OnPush tells Angular to run change
+            detection only when necessary, improving performance.
+          </p>
+          <pre>
+            Runs change detection only when:
+
+            -> Input reference changes – A new object/array reference is passed from the parent
+
+            -> Event occurs – A user action like click or input inside the component
+
+            -> Observable emits value – Data updates via async pipe or manual subscription
+              </pre
+          >
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">
+          Structural vs Attribute Directives <span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+          Structural: *ngIf, *ngFor, *ngSwitch
+          Attribute: ngClass, ngStyle
+
+          Note:Give Example also
+          </pre>
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">Custom Directive <span>+</span></div>
+        <div class="accordion-content">
+          <pre>
+            A custom directive is a user-defined Angular directive used to add custom behavior or manipulate the DOM of an element.
+
+            Custom directives let us create reusable DOM behavior in Angular.
+   
+            Used to manipulate DOM behavior (e.g., highlight, tooltip).
+
+
+            Example:
+
+            TS File Code:
+            
+            import { Directive, ElementRef, HostListener } from '@angular/core';
+
+            @Directive({
+              selector: '[appHighlight]'
+            })
+            export class HighlightDirective {
+
+              constructor(private el: ElementRef) {}
+
+              @HostListener('mouseenter')
+              onMouseEnter() {
+                this.el.nativeElement.style.backgroundColor = 'yellow';
+              }
+
+              @HostListener('mouseleave')
+              onMouseLeave() {
+                this.el.nativeElement.style.backgroundColor = '';
+              }
+            }
+
+            HTML File Code:
+
+            <p appHighlight>Hover over me</p>
+
+   
+          </pre>
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">Pure vs Impure Pipes <span>+</span></div>
+        <div class="accordion-content">
+          <pre>
+             Pure → Runs only when input changes
+             Impure → Runs every change detection cycle
+          </pre>
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">Custom Pipe Use Case <span>+</span></div>
+        <div class="accordion-content">
+          <pre>
+             Formatting dates, filtering lists, transforming data.
+          </pre>
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">Dependency Injection <span>+</span></div>
+        <div class="accordion-content">
+          <pre>
+          Dependency Injection (DI) is a design pattern where a class does not create its dependencies itself, but receives them from an external source.
+
+
+           Design pattern where dependencies are injected instead of created manually.
+
+
+            Benefits of Dependency Injection
+            | Benefit        | Explanation                                                |
+            | -------------- | ---------------------------------------------------------- |
+            | Loose coupling | Components don’t create dependencies themselves            |
+            | Easy testing   | Can replace dependencies with mocks/fakes                  |
+            | Reusability    | Same service instance can be shared                        |
+            | Configurable   | Can have different instances in different parts of the app |
+
+
+          </pre>
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">Providers <span>+</span></div>
+        <div class="accordion-content">
+          <pre>
+           They tell Angular how to create a service.
+
+            When a component or service asks for a dependency,
+            Angular looks for a matching provider
+          </pre>
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">
+          providedIn: 'root' vs providers array <span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+
+            In Angular, providedIn: 'root' and the providers array both register services with the Dependency Injection system, but they differ in scope, lifetime, and best use cases.
+
+           providedIn: 'root' → Singleton, tree-shakable
+            
+           @Injectable({
+              providedIn: 'root'
+            })
+            export class AuthService {}
+
+            When to use
+            App-wide services (auth, API, state, logging)
+            Shared utilities
+            Services used by many modules/components
+
+
+          providers array → Component-level instance
+
+            @Component({
+            selector: 'app-profile',
+            providers: [AuthService]
+          })
+          export class ProfileComponent {}
+
+          Where it can be used
+          @Component
+          @NgModule
+          Route providers (Angular 14+)
+
+
+          </pre>
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">Hierarchical DI <span>+</span></div>
+        <div class="accordion-content">
+          <pre>
+          Different injector levels:
+          Root
+          Module
+          Component
+          </pre>
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">Why Services <span>+</span></div>
+        <div class="accordion-content">
+          <pre>
+            Code reusability
+
+            Business logic separation
+
+            Data sharing
+          </pre>
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">What is RxJS?<span>+</span></div>
+        <div class="accordion-content">
+          <pre>
+            Library for reactive programming using Observables.
+          </pre>
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">Observable vs Promise<span>+</span></div>
+        <div class="accordion-content">
+          <pre>
+
+            In Angular, Observables and Promises are both used for async work, but they are not interchangeable. Angular is built around RxJS Observables,
+
+            | Feature         | Observable          | Promise |
+            | --------------- | ------------------- | ------- |
+            | Values          | Multiple            | Single  |
+            | Execution       | Lazy                | Eager   |
+            | Cancellation    | Yes (`unsubscribe`) | No      |
+            | Operators       | Rich (RxJS)         | Limited |
+            | Retry           | Built-in (`retry`)  | Manual  |
+            | Angular Support | Native              | Limited |
+
+
+
+          Observable	        Promise
+          Multiple values	    Single value
+          Cancelable	        Not cancelable
+          Lazy	              Eager
+          </pre>
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">Subject Types<span>+</span></div>
+        <div class="accordion-content">
+          <pre>
+
+            Subject → No initial value
+
+            BehaviorSubject → Initial value
+
+            ReplaySubject → Replays previous values
+          </pre>
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">Async Pipe<span>+</span></div>
+        <div class="accordion-content">
+          <pre>
+
+             Automatically subscribes and unsubscribes observables in templates.
+          </pre>
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">Unsubscribe Methods<span>+</span></div>
+        <div class="accordion-content">
+          <pre>
+             async pipe
+             takeUntil
+             unsubscribe() in ngOnDestroy
+          </pre>
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">
+          Routing in Angular / Lazy Routing<span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+             Standalone components are default
+
+            NgModule is optional (legacy)
+
+            loadComponent() → lazy component
+
+            loadChildren() → lazy route group
+
+            Better tree-shaking & performance
+          </pre>
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">AOT in Angular<span>+</span></div>
+        <div class="accordion-content">
+          <pre>
+           AOT (Ahead-of-Time compilation) is an Angular process where Angular compiles HTML templates and components into efficient JavaScript code during the build time instead of at runtime in the browser.
+
+
+          | Feature          | AOT              | JIT               |
+          | ---------------- | ---------------- | ----------------- |
+          | Compilation time | Build time       | Runtime (browser) |
+          | App startup      | **Faster**       | Slower            |
+          | Bundle size      | **Smaller**      | Larger            |
+          | Error detection  | **During build** | During runtime    |
+          | Security         | **More secure**  | Less secure       |
+          | Production use   | ✅ Default        | ❌ Not recommended |
+
+
+
+          Interview-Ready Definition
+
+          AOT (Ahead-of-Time compilation) compiles Angular templates into optimized JavaScript at build time, resulting in faster startup, smaller bundles, improved security, and early error detection compared to JIT compilation.
+          </pre>
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">IVY in Angular<span>+</span></div>
+        <div class="accordion-content">
+          <pre>
+          Ivy is Angular’s default rendering and compilation engine that converts templates into efficient JavaScript instructions, enabling faster builds, smaller bundles, improved performance, and better debugging. It works together with AOT to optimize Angular applications.
+          </pre>
+        </div>
+      </div>
+
+
+       <div class="accordion">
+        <div class="accordion-header">Auth Guard in Angular<span>+</span></div>
+        <div class="accordion-content">
+          <pre>
+              Run Command ng generate guard auth
+
+              create Services
+
+              // auth.service.ts
+              import { Injectable } from '@angular/core';
+
+              @Injectable({
+                providedIn: 'root'
+              })
+              export class AuthService {
+
+                isLoggedIn(): boolean {
+                  return !!localStorage.getItem('token'); // example
+                }
+              }
+
+              Implement Authguard
+
+              // auth.guard.ts
+            import { inject } from '@angular/core';
+            import { CanActivateFn, Router } from '@angular/router';
+            import { AuthService } from './auth.service';
+
+            export const authGuard: CanActivateFn = () => {
+              const authService = inject(AuthService);
+              const router = inject(Router);
+
+              if (authService.isLoggedIn()) {
+                return true;
+              }
+
+              router.navigate(['/login']);
+              return false;
+            };
+
+
+            // app-routing.module.ts
+            import { NgModule } from '@angular/core';
+            import { RouterModule, Routes } from '@angular/router';
+            import { AuthGuard } from './auth.guard';
+            import { DashboardComponent } from './dashboard/dashboard.component';
+
+            const routes: Routes = [
+              {
+                path: 'dashboard',
+                component: DashboardComponent,
+                canActivate: [AuthGuard]
+              },
+              {
+                path: 'login',
+                loadComponent: () => import('./login/login.component')
+              }
+            ];
+
+            @NgModule({
+              imports: [RouterModule.forRoot(routes)],
+              exports: [RouterModule]
+            })
+            export class AppRoutingModule {}
+
+
+          </pre>
+        </div>
+      </div>
+
+
+          <div class="accordion">
+        <div class="accordion-header">CanActivate, CanActivateChild, canDeactivate, CanLoad<span>+</span></div>
+        <div class="accordion-content">
+          <pre>
+             CanActivate
+            👉 Controls access to a route
+            Use case:
+            ✔ User must be logged in
+            ✔ Role-based access
+
+
+            CanActivateChild
+            👉 Controls access to child routes
+            Use case:
+            ✔ Protect all child routes with one guard
+            ✔ Admin section protection
+
+
+            CanDeactivate
+            👉 Prevents leaving a route
+            Use case:
+            ✔ Unsaved form changes
+            ✔ Confirmation before exit
+
+
+            CanLoad (⚠️ Legacy / Lazy Modules)
+            👉 Prevents loading a lazy-loaded module
+            Use case:
+            ✔ Block downloading admin module for unauthorized users
+          </pre>
+        </div>
+      </div>
+
+
+       <div class="accordion">
+        <div class="accordion-header">forroot vs forchild<span>+</span></div>
+        <div class="accordion-content">
+          <pre>
+              forRoot() → Use once (usually in AppModule) to create singleton services
+
+              forChild() → Use in feature or lazy-loaded modules to reuse functionality without 
+              creating new service instances
+
+
+              ❌ Using RouterModule.forRoot() in standalone apps
+              ✅ Use provideRouter()
+
+              ❌ Declaring components in NgModule
+              ✅ Use standalone components
+          </pre>
+        </div>
+      </div>
+
+
+
+      <div class="accordion">
+        <div class="accordion-header">Reactive Form<span>+</span></div>
+        <div class="accordion-content">
+          <pre>
+             Reactive Forms:
+
+            Are model-driven
+
+            Use FormControl, FormGroup, FormArray
+
+            Are scalable, testable, and predictable
+
+            Best for complex forms
+          </pre>
+        </div>
+      </div>
+    </main>
+
+    <footer>📘 Angular Interview Accordion Notes</footer>
+
+    <script>
+      document.querySelectorAll(".accordion-header").forEach((header) => {
+        header.addEventListener("click", () => {
+          const content = header.nextElementSibling;
+          const icon = header.querySelector("span");
+          content.style.display =
+            content.style.display === "block" ? "none" : "block";
+          icon.textContent = icon.textContent === "+" ? "−" : "+";
+        });
+      });
+    </script>
+  </body>
+</html>

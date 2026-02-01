@@ -1,5 +1,23 @@
 
 
+var x=1;
+a();
+b();
+
+console.log(x)
+
+
+
+function a(){
+    var x=10;
+    console.log(x)
+}
+
+
+function b(){
+    var y=10;
+    console.log(y)
+}
 
 // 1.  What is Function Statement ?
 // A.  A normal function that we create using Naming convention. & By this we can do the Hoisting.
@@ -50,53 +68,17 @@
 
 /*--------Closure----------*/
 
-function x(){
-    var a=10;
-    function y(){
-        console.log(a);
-    }
-    y();
+// function x(){
+//     var a=10;
+//     function y(){
+//         console.log(a);
+//     }
+//     y();
 
-}
-
-x();
-
-
-/*--------Closure close----------*/
-
-/*--------Hoisting----------*/
-
- 
-
-/*--------Hoisting close----------*/
-
-
-/*--------Map Function----------*/
-
-// var arr=[2,4,6]
-
-// var a =arr.map(double);
-
-// function double(a){
-//     return a*2;
 // }
-// console.log(a)
 
-/*--------Map Function close----------*/
+// x();
 
-
-/*--------Filter Function----------*/
-
-// var arr=[7,2,4,6,1,3,5]
-
-// var a =arr.filter(odd);
-
-// function odd(x){
-//     return x%2;
-// }
-// console.log(a)
-
-/*--------Filter Function close----------*/
 
 
 /*--------Reduce Function----------*/

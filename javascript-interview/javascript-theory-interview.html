@@ -1,0 +1,775 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JavaScript Interview Questions & Answers</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+      body {
+        margin: 0;
+        font-family: "Segoe UI", system-ui, sans-serif;
+        background: #f9fafb;
+        color: #111827;
+      }
+
+      header {
+        background: linear-gradient(135deg, #4f46e5, #6366f1);
+        color: #fff;
+        padding: 30px 20px;
+        text-align: center;
+      }
+
+      main {
+        max-width: 1200px;
+        margin: auto;
+        padding: 20px;
+      }
+
+      .accordion {
+        background: #fff;
+        border-radius: 10px;
+        margin-bottom: 12px;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+        overflow: hidden;
+      }
+
+      .accordion-header {
+        padding: 16px 20px;
+        cursor: pointer;
+        font-weight: 600;
+        background: #eef2ff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .accordion-header:hover {
+        background: #e0e7ff;
+      }
+
+      .accordion-content {
+        display: none;
+        padding: 16px 20px;
+      }
+
+      pre {
+        background: #0f172a;
+        color: #e5e7eb;
+        padding: 14px;
+        border-radius: 8px;
+        overflow-x: auto;
+        font-size: 0.85rem;
+        white-space: pre-line;
+      }
+
+      footer {
+        text-align: center;
+        padding: 20px;
+        color: #6b7280;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>JavaScript Theory Interview Q&A</h1>
+      <p>Accordion-based revision notes (JavaScript Theory Questions)</p>
+    </header>
+
+    <main>
+      <!-- 1 -->
+
+      <div class="accordion">
+        <div class="accordion-header">What is JavaScript<span>+</span></div>
+        <div class="accordion-content">
+          <pre>
+          JavaScript is single-threaded
+
+          It has one call stack
+
+          It can execute one piece of code at a time
+
+          No true parallel execution in the main thread
+
+       JavaScript is single-threaded, but it achieves asynchronous behavior through the event loop and Web APIs.
+          </pre>
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">Datatype in JavaScript<span>+</span></div>
+        <div class="accordion-content">
+          <pre>
+          JavaScript has 8 data types, divided into Primitive and Non-Primitive (Reference) types.
+          
+          Primitive Data Types (7)
+          
+          Primitive types store single, immutable values.
+        Number
+        String
+        Boolean
+        Undefined
+        Null
+        Symbol.unique identifiers often used as object keys
+        BigInt
+
+        Non-Primitive (Reference) Data Types
+        Object
+
+        Includes:
+        Objects
+        Arrays
+        Functions
+        Dates
+        </pre
+          >
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">DOM <span>+</span></div>
+        <div class="accordion-content">
+          <pre>
+            DOM (Document Object Model) is a programming interface that represents an HTML document as a tree of objects, so JavaScript can read, change, add, or remove elements on a web page.
+            
+            Example 
+            <p id="text">Hello</p>
+            <button>Click</button>
+
+            Document
+            └── html
+                └── body
+                    ├── p
+                    └── button
+            Each HTML element becomes a node (object) in the DOM.
+
+            Types of DOM Nodes
+
+            -> Element nodes → HTML tags 
+
+            -> Text nodes → text inside elements
+
+            -> Attribute nodes → attributes (id, class)
+
+            -> Document node → whole HTML page
+       
+        DOM is a tree-like structure representing HTML that allows JavaScript to dynamically manipulate web page content and styles.
+        </pre>
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">
+          innerHTML vs innerText vs textContent <span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+            ✅ Use innerHTML → when you need to insert HTML
+
+            ✅ Use textContent → when working with text only (best choice)
+
+            ⚠️ Use innerText → when you need visible text respecting CSS
+        </pre
+          >
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">Operator <span>+</span></div>
+        <div class="accordion-content">
+          <pre>
+            Arithmetic Operators
+            Assignment Operators
+            Comparison Operators
+            Logical Operators
+            Ternary Operator
+            Type Operators
+            Bitwise Operators
+            Spread & Rest Operator
+            Optional Chaining (?.)
+            Nullish Coalescing (??) (Only checks null or undefined) (Better than ||)
+
+            The comma operator ( , ) allows you to evaluate multiple expressions, but it returns the value of the last expression.
+        </pre
+          >
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">How Javascript work <span>+</span></div>
+        <div class="accordion-content">
+          <pre>
+            Everything in JavaScript happen inside an execution context
+             Global Exectuion Context created at the time JS run 
+           
+            Global Exectuion Context created
+            --------------------------------
+            Memory Component Code Or Thread of excution
+            .              .
+            .              . 
+            .              .
+            .              .
+            .------------------------------
+              
+            JavaScript is a synchronous single threaded language , one command at a time
+
+          </pre>
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">
+          How JavaScript work and execution context work<span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+
+            when you run a function or when you invoke a function a brand new excution context created
+            return  keyword state that, now return the control of the program to the place where this function was invoked
+        </pre
+          >
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">What is Call stack<span>+</span></div>
+        <div class="accordion-content">
+          <pre>
+            Call stack remembers which function is currently running and what should run next.
+
+            JavaScript is single-threaded
+
+            It can execute one function at a time
+
+            The call stack works on LIFO principle
+            (Last In, First Out)
+
+            Example:- 
+            function first() {
+            console.log("First");
+            }
+
+            function second() {
+            first();
+            console.log("Second");
+            }
+
+            second();
+
+          </pre>
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">Hoisting in Javascript<span>+</span></div>
+        <div class="accordion-content">
+          <pre>
+            Hoisting is JavaScript’s we can say access variablle before decleartion
+
+            Example
+            console.log(a); // undefined
+            var a = 5;
+
+            You can access, but it’s undefined because only the declaration is hoisted, not the value.
+
+            console.log(b); // ReferenceError
+            let b = 10;
+            You cannot access before declaration
+            They are in the Temporal Dead Zone (TDZ)
+
+            Function Declarations
+            greet(); // Works
+            function greet() { console.log("Hello"); }
+
+            Fully hoisted — can be called before declaration
+
+            When we use normal function in hositing it show whole function in scope while arrow function
+            consider as a varibale and show undefined
+
+          </pre>
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">Template literals<span>+</span></div>
+        <div class="accordion-content">
+          <pre>
+           Template literals are strings enclosed in backticks (`) that support interpolation, multi-line text, and expressions using ${}.
+
+            Example:-
+            const a=33
+            console.log(`{My age is ${a}}`)
+
+          </pre>
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">
+          Function Invoked/ How Function Work in JS and Variable in env.<span
+            >+</span
+          >
+        </div>
+        <div class="accordion-content">
+          <pre></pre>
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">
+          Shortest JS program/ window & this keyword<span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+            At the global level this point to the window object, window is a global object which is created along with the global execution context.
+
+
+            console.log(this);
+            In browser → window object
+            In Node.js → {} (module scope)
+
+            What is this?
+
+            this is a special keyword that refers to the context object in which a function is executed.
+
+            Its value depends on how a function is called, not where it’s defined.
+
+
+            Example
+            const obj = {
+            name: "Salil",
+            greet: function() {
+                console.log(this.name);
+            }
+            };
+
+            obj.greet();
+
+
+            document is part of the Browser Object Model (BOM).
+
+            It represents the HTML page loaded in the browser.
+
+            You use document to access/manipulate HTML elements (DOM)
+
+            this===window // true
+
+            Note: Any variable or function declared outside of a function is in the global scope. In browsers, var globals attach to window, while let and const do not
+          </pre>
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">Javascript engine<span>+</span></div>
+        <div class="accordion-content">
+          <pre>
+            V8=> developed by google Javascript engine used in chrome
+            Spider Moneky => Developed by Mozilla used in firefox
+          </pre>
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">
+          Undefined/ not defined / null<span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+            undefined
+
+            A value automatically assigned by JavaScript to a variable that has been declared but not initialized.
+            
+            Type: undefined
+
+            Example:-
+
+            var a;
+            let b;
+            const c
+
+            console.log(a,b,c)
+            for const c
+            So this is not about hoisting or TDZ, it’s a syntax rule: const must have a value at declaration.
+
+            Null
+
+            Represents intentional “no value”.
+            Type: object (this is a weird JS quirk)
+
+            Use null when you want to clear a variable or indicate no value intentionally.
+
+            not defined
+            Happens when you try to access a variable that hasn’t been declared at all.
+            not defined → variable never declared, accessing it throws ReferenceError
+
+            
+
+
+          </pre>
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">var,let and const<span>+</span></div>
+        <div class="accordion-content">
+          <pre>
+            var
+
+            => Function-scoped (not block-scoped)
+
+            => Can be redeclared and reassigned
+
+            => Is hoisted and initialized as undefined
+
+            => Old-school JS (mostly avoid now)
+            
+            let
+
+            => Block-scoped
+
+            => Can be reassigned
+
+            => ❌ Cannot be redeclared in the same scope
+
+            => Hoisted but not initialized (temporal dead zone)
+
+            const 
+
+            Block-scoped
+
+            ❌ Cannot be redeclared
+
+            ❌ Cannot be reassigned
+
+            Must be initialized when declared
+
+            ⚠️ But objects & arrays can still change internally
+
+
+
+            yes let and const are hoisted and they are in temporal dead zone for time being.
+
+            let and const stored in seprate memory space
+
+          </pre>
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">Temporal dead zone<span>+</span></div>
+        <div class="accordion-content">
+          <pre>
+            the phase from hoisting till it assign some value or get some value that phase known as temporal
+            dead zone or TDZ
+
+          </pre>
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">
+          Reference Error, Type Error and Syntax Error<span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+            Reference Error: -when you access variable which is temproal dead zone the if give refrence error, also that variable which is not decleared it give reference error
+            
+            Type Error:- when const already have some value but we reassign value
+            
+            Syntax Error:- const b when we not decleared value in const and also let a=100 and again
+            we intialize value then it known as syntax error 
+
+          </pre>
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">
+         Strict Mode (use strict)<span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+            "use strict";
+            y = 30;
+            console.log(y);
+
+          </pre>
+        </div>
+      </div>
+
+       <div class="accordion">
+        <div class="accordion-header">
+         Block Scope and Shadowing in Js<span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+                             {
+            Block Scope   =>      
+                             } 
+            also known as compound statment 
+              
+            {
+              var a=10;
+              let b=20;
+              const c=30;
+            }
+
+            when we run above code and set debugger line no.1 then in scope Block b and c undefined and come in global scope
+
+
+            Shadowing in js 
+
+            Example 
+
+            let a=10;
+
+            {
+              let a =100;
+            }
+
+            here a is shadowing
+
+
+
+             Example 
+
+            let a=20;
+
+            {
+              var a =25;
+            }
+
+            here is illegal shadowing
+
+
+          </pre>
+        </div>
+      </div>
+
+
+       <div class="accordion">
+        <div class="accordion-header">
+        Closure in Js<span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+              Closure is a function together bundle with it lexical environment
+              
+              Function along with its lexical scope bundle together form closure
+
+
+              Example:- 
+              
+              function x(){
+                var a=7;
+                function y(){
+                  console.log(a)
+                }
+                y();
+              } 
+              x()
+
+
+          </pre>
+        </div>
+      </div>
+
+
+       <div class="accordion">
+        <div class="accordion-header">
+        First class function/First class citizen/Function statment or Decleartion/Expersioon<span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+            
+          </pre>
+        </div>
+      </div>
+
+
+         <div class="accordion">
+        <div class="accordion-header">
+        Call back<span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+            Take a function  and passed into other function and when you do so this function which you passed into other function is known as callback function.
+
+            JavaScript is a synchronous and single threaded language with help of callback function we perform asynchronous
+
+            Example:-
+
+            setTimeout(function () {
+            console.log("This runs after 2 seconds");
+          }, 2000);
+
+
+          </pre>
+        </div>
+      </div>
+
+
+      <div class="accordion">
+        <div class="accordion-header">
+        Callback Hell<span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+          Nested callbacks become unreadable:
+
+          Example:-
+
+            getUser(id, function (user) {
+              getPosts(user, function (posts) {
+                getComments(posts, function (comments) {
+                  console.log(comments);
+                });
+              });
+            });
+
+            👎 Hard to read
+            👎 Hard to debug
+
+            👉 This is why Promises and async/await exist
+
+          </pre>
+        </div>
+      </div>
+
+
+      <div class="accordion">
+        <div class="accordion-header">
+        Event Loop<span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+          
+          </pre>
+        </div>
+      </div>
+
+
+        <div class="accordion">
+        <div class="accordion-header">
+        higher-order function<span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+              A higher-order function is a function that takes another function as an argument or returns a function.
+
+              Example:-
+
+              const nums = [1, 2, 3];
+              const squared = nums.map(n => n * n);
+
+              Example:-
+
+              function greet(name, callback) {
+                console.log("Hi " + name);
+                callback();
+              }
+
+              function sayBye() {
+                console.log("Bye!");
+              }
+
+              greet("Alex", sayBye);
+
+
+          </pre>
+        </div>
+      </div>
+
+       <div class="accordion">
+        <div class="accordion-header">
+        Call, Apply, Bind <span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+
+            call,apply and bind is used for borrowing function
+
+              call()
+              Calls the function immediately
+              Arguments passed one by one
+
+
+              apply()
+
+              Calls the function immediately
+              Arguments passed as an array
+
+              bind()
+              Does NOT call immediately
+              Returns a new function with this bound
+
+
+              | Method | Executes Immediately | Arguments       | Returns         |
+              | ------ | -------------------- | --------------- | --------------- |
+              | call   | ✅ Yes                | Comma-separated | Function result |
+              | apply  | ✅ Yes                | Array           | Function result |
+              | bind   | ❌ No                 | Comma / Array   | New function    |
+
+
+          </pre>
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">
+        Currying in js <span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+            Currying is a technique where a function with multiple arguments is transformed into a sequence of functions, each taking one argument at a time.
+
+            OR
+
+            Currying is the process of converting a function with multiple arguments into a chain of functions, each taking a single argument.
+
+            Example:-
+
+
+            function add(a) {
+              return function (b) {
+                return a + b;
+              };
+            }
+
+            console.log(add(2)(3))
+
+          </pre>
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">
+         Prototype/ Prototypal Inheritance <span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+            
+
+          </pre>
+        </div>
+      </div>
+
+
+    </main>
+
+    <footer>📘 JavaScript Theory Interview Accordion Notes</footer>
+
+    <script>
+      document.querySelectorAll(".accordion-header").forEach((header) => {
+        header.addEventListener("click", () => {
+          const content = header.nextElementSibling;
+          const icon = header.querySelector("span");
+          content.style.display =
+            content.style.display === "block" ? "none" : "block";
+          icon.textContent = icon.textContent === "+" ? "−" : "+";
+        });
+      });
+    </script>
+  </body>
+</html>

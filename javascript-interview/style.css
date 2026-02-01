@@ -1,0 +1,260 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  color: #fff;
+  background: #0b0f1a;
+  overflow-x: hidden;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* Animated background blobs */
+.bg-blobs span {
+  position: fixed;
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  filter: blur(120px);
+  animation: float 15s infinite alternate;
+  z-index: -1;
+}
+
+.bg-blobs span:nth-child(2) {
+  top: 40%;
+  left: 60%;
+  animation-delay: 3s;
+}
+
+.bg-blobs span:nth-child(3) {
+  top: 70%;
+  left: 20%;
+  animation-delay: 6s;
+}
+
+@keyframes float {
+  from { transform: translateY(0); }
+  to { transform: translateY(-120px); }
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  padding: 20px 0;
+  backdrop-filter: blur(10px);
+  background: rgba(255,255,255,.05);
+  z-index: 100;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.logo span {
+  color: #00c6ff;
+}
+
+nav a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: #fff;
+  opacity: .8;
+}
+
+nav a:hover {
+  opacity: 1;
+}
+
+/* Hero */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 60px;
+}
+
+.hero span {
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.hero p {
+  margin: 25px 0;
+  font-size: 20px;
+  opacity: .85;
+}
+
+/* Buttons */
+.btn {
+  padding: 14px 40px;
+  border-radius: 50px;
+  border: none;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.glow {
+  box-shadow: 0 0 25px rgba(0,198,255,.6);
+}
+
+/* Sections */
+section {
+  padding: 120px 0;
+}
+section {
+  scroll-margin-top: 100px;
+}
+
+section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 38px;
+}
+
+.dark {
+  background: rgba(255,255,255,.03);
+}
+
+/* Skills */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.skill-card {
+  padding: 30px;
+  border-radius: 20px;
+  background: rgba(255,255,255,.05);
+  backdrop-filter: blur(10px);
+  text-align: center;
+  transition: .4s;
+}
+
+.skill-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 20px 40px rgba(0,0,0,.4);
+}
+
+/* Contact form */
+.glass {
+  max-width: 500px;
+  margin: auto;
+  padding: 40px;
+  border-radius: 20px;
+  background: rgba(255,255,255,.06);
+  backdrop-filter: blur(12px);
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 14px;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,.3);
+  border-radius: 10px;
+  color: #fff;
+  outline: none;
+}
+
+.input-group label {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  opacity: .6;
+  transition: .3s;
+}
+
+.input-group input:focus + label,
+.input-group textarea:focus + label,
+.input-group input:valid + label,
+.input-group textarea:valid + label {
+  top: -8px;
+  background: #0b0f1a;
+  padding: 0 6px;
+  font-size: 12px;
+  opacity: 1;
+}
+
+footer {
+  text-align: center;
+  padding: 25px;
+  opacity: .6;
+}
+
+/* Scroll animation */
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 1s;
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.delay { transition-delay: .2s; }
+.delay-2 { transition-delay: .4s; }
+
+
+
+/* Timeline */
+.timeline {
+  margin-top: 40px;
+}
+
+.timeline-item {
+  background: rgba(255,255,255,.06);
+  padding: 25px;
+  border-radius: 15px;
+  margin-bottom: 25px;
+  transition: .4s;
+}
+
+.timeline-item:hover {
+  transform: translateX(10px);
+}
+
+.timeline-item h3 {
+  margin-bottom: 5px;
+}
+
+.timeline-item span {
+  font-size: 14px;
+  opacity: .7;
+}
+
