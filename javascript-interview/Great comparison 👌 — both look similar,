@@ -1,0 +1,99 @@
+Great comparison 👌 — both look similar, but they’re actually very different concepts.
+Here’s how to explain the difference clearly (and interview-ready).
+
+Program 1: Fixed (pure) currying
+function sum(a){
+  return function (b){
+    return function(c){
+      return function(d){
+        return a + b + c + d;
+      }
+    }
+  }
+}
+
+console.log(sum(1)(2)(3)(4)); // 10
+
+What this is
+
+✅ Pure / fixed currying
+
+Key characteristics
+
+Fixed number of arguments (4)
+
+One function per argument
+
+Stops automatically after the last argument
+
+No special stop condition needed
+
+No recursion
+
+How it works
+
+Each function stores its value via closure
+
+Final function computes and returns the result
+
+When to use
+
+When the number of parameters is known in advance
+
+Functional programming patterns
+
+Program 2: Infinite / variadic currying
+let sum = function (a) {
+  return function (b) {
+    if (b !== undefined) {
+      return sum(a + b);
+    }
+    return a;
+  };
+}
+
+console.log(sum(1)(2)(3)(4)()); // 10
+
+What this is
+
+✅ Infinite (dynamic) currying using recursion
+
+Key characteristics
+
+Unlimited number of arguments
+
+Uses recursion
+
+Requires an explicit termination ()
+
+Accumulates result step by step
+
+How it works
+
+Each call creates a new closure with updated a
+
+Stops only when no argument is passed
+
+When to use
+
+When the number of arguments is not known
+
+Chainable APIs (like sum(1)(2)(3)...)
+
+🔍 Side-by-side comparison
+Feature	Program 1	Program 2
+Arguments	Fixed (4)	Unlimited
+Currying type	Pure / fixed	Infinite / variadic
+Uses recursion	❌ No	✅ Yes
+Stop condition	Automatic	Explicit ()
+Flexibility	Low	High
+Interview label	“Currying”	“Currying + Closure + Recursion”
+🧠 One-line interview answer
+
+If they ask “difference between these two?” say:
+
+“The first example is fixed currying with a known number of arguments, while the second example is infinite currying using recursion and closures, where arguments can be passed dynamically and the chain stops explicitly.”
+
+Bonus insight (interview brownie points 🍪)
+
+“The second approach is more flexible but slightly less readable, while the first is cleaner when arity is known.”

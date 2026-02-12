@@ -79,7 +79,7 @@
 
     <main>
       <!-- 1 -->
- 
+
       <div class="accordion">
         <div class="accordion-header">
           Array length const arr = [20,30,50,2,3] <span>+</span>
@@ -92,10 +92,9 @@
         </div>
       </div>
 
-
       <div class="accordion">
         <div class="accordion-header">
-           Last Elemnt const arr = [20,30,50,2,3] <span>+</span>
+          Last Elemnt const arr = [20,30,50,2,3] <span>+</span>
         </div>
         <div class="accordion-content">
           <pre>
@@ -105,10 +104,11 @@
           </pre>
         </div>
       </div>
- 
+
       <div class="accordion">
         <div class="accordion-header">
-            Set Array acending and desending order const arr = [20,30,50,2,3] <span>+</span>
+          Set Array acending and desending order const arr = [20,30,50,2,3]
+          <span>+</span>
         </div>
         <div class="accordion-content">
           <pre>
@@ -123,14 +123,51 @@
              const arr = [20,30,50,2,3]
              const newarr  = arr.sort(function(a,b){return b-a})
              console.log(newarr)
-          </pre>
+
+
+             OR
+
+            function selectionSort(arr) {
+            for (let i = 0; i < arr.length; i++) {
+              let minIndex = i;
+
+              for (let j = i + 1; j < arr.length; j++) {
+                if (arr[j] < arr[minIndex]) {
+                  minIndex = j;
+                }
+              }
+
+              // Swap
+              [arr[i], arr[minIndex]] = [arr[minIndex], arr[i]];
+            }
+
+            return arr;
+          }
+
+
+          OR
+
+          function simpleSort(arr) {
+            for (let i = 0; i < arr.length; i++) {
+              for (let j = i + 1; j < arr.length; j++) {
+                if (arr[i] > arr[j]) {
+                  [arr[i], arr[j]] = [arr[j], arr[i]];
+                }
+              }
+            }
+            return arr;
+          }
+
+
+            </pre
+          >
         </div>
       </div>
 
-
       <div class="accordion">
         <div class="accordion-header">
-            Set Array alphabet order const cityarr = ["Amritsar","Delhi","Agra","Bhopal","Nagpur"] <span>+</span>
+          Set Array alphabet order const cityarr =
+          ["Amritsar","Delhi","Agra","Bhopal","Nagpur"] <span>+</span>
         </div>
         <div class="accordion-content">
           <pre>
@@ -142,10 +179,10 @@
         </div>
       </div>
 
-
-       <div class="accordion">
+      <div class="accordion">
         <div class="accordion-header">
-          Smallest String in Array cityarr = ["Amritsar","Delhi","Agra","Bhopal","Nagpur"] <span>+</span>
+          Smallest String in Array cityarr =
+          ["Amritsar","Delhi","Agra","Bhopal","Nagpur"] <span>+</span>
         </div>
         <div class="accordion-content">
           <pre>
@@ -157,10 +194,10 @@
         </div>
       </div>
 
-
-       <div class="accordion">
+      <div class="accordion">
         <div class="accordion-header">
-          Print string length in place of city name cityarr = ["Amritsar","Delhi","Agra","Bhopal","Nagpur"] <span>+</span>
+          Print string length in place of city name cityarr =
+          ["Amritsar","Delhi","Agra","Bhopal","Nagpur"] <span>+</span>
         </div>
         <div class="accordion-content">
           <pre>
@@ -171,11 +208,10 @@
         </div>
       </div>
 
-
-       <div class="accordion">
+      <div class="accordion">
         <div class="accordion-header">
-          Remove 30 and 50 Elemnt from Array const arr =
-                [20,30,50,2,3] <span>+</span>
+          Remove 30 and 50 Elemnt from Array const arr = [20,30,50,2,3]
+          <span>+</span>
         </div>
         <div class="accordion-content">
           <pre>
@@ -195,12 +231,10 @@
         </div>
       </div>
 
-
-
-        <div class="accordion">
+      <div class="accordion">
         <div class="accordion-header">
-          Remove 30 and 50 and add 40,60 in place of that
-                Elemnt from Array const arr = [20,30,50,2,3]<span>+</span>
+          Remove 30 and 50 and add 40,60 in place of that Elemnt from Array
+          const arr = [20,30,50,2,3]<span>+</span>
         </div>
         <div class="accordion-content">
           <pre>
@@ -217,11 +251,9 @@
         </div>
       </div>
 
-
-       <div class="accordion">
+      <div class="accordion">
         <div class="accordion-header">
-          Sum of array Array const arr =
-                [20,30,50,2,3]<span>+</span>
+          Sum of array Array const arr = [20,30,50,2,3]<span>+</span>
         </div>
         <div class="accordion-content">
           <pre>
@@ -233,8 +265,7 @@
         </div>
       </div>
 
-
-         <div class="accordion">
+      <div class="accordion">
         <div class="accordion-header">
           Call Objec Keys and Value Sepratly<span>+</span>
         </div>
@@ -260,12 +291,8 @@
         </div>
       </div>
 
-
-
-        <div class="accordion">
-        <div class="accordion-header">
-          Delete Object Keys<span>+</span>
-        </div>
+      <div class="accordion">
+        <div class="accordion-header">Delete Object Keys<span>+</span></div>
         <div class="accordion-content">
           <pre>
             userDetails ={
@@ -282,10 +309,9 @@
         </div>
       </div>
 
-
       <div class="accordion">
         <div class="accordion-header">
-         Add dynamic property in object<span>+</span>
+          Add dynamic property in object<span>+</span>
         </div>
         <div class="accordion-content">
           <pre>
@@ -301,23 +327,24 @@
         </div>
       </div>
 
-
       <div class="accordion">
         <div class="accordion-header">
-         How do you check if an object has a property in JavaScript?<span>+</span>
+          How do you check if an object has a property in JavaScript?<span
+            >+</span
+          >
         </div>
         <div class="accordion-content">
           <pre>userDetails.hasOwnProperty('name')</pre>
         </div>
       </div>
 
-
       <div class="accordion">
         <div class="accordion-header">
-         Object Key and Value itreate for in loop<span>+</span>
+          Object Key and Value itreate for in loop<span>+</span>
         </div>
         <div class="accordion-content">
-          <pre> const user ={
+          <pre>
+ const user ={
                  firstName:"Salil",
                  lastName:"Trivedi",
                  age:20
@@ -325,19 +352,16 @@
              for(key in user){
                  console.log(user[key])
                  console.log(key)
-             }</pre>
+             }</pre
+          >
         </div>
       </div>
 
-
-
-
-       <div class="accordion">
-        <div class="accordion-header">
-         Object Freeze<span>+</span>
-        </div>
+      <div class="accordion">
+        <div class="accordion-header">Object Freeze<span>+</span></div>
         <div class="accordion-content">
-          <pre> 
+          <pre>
+ 
             const obj1 = { property1: 'initial_data' };
             const obj2 = Object.freeze(obj1);
             obj2.property1 = 'new_data';
@@ -346,15 +370,11 @@
         </div>
       </div>
 
-
-
-
       <div class="accordion">
-        <div class="accordion-header">
-         Call , Apply and Bind<span>+</span>
-        </div>
+        <div class="accordion-header">Call , Apply and Bind<span>+</span></div>
         <div class="accordion-content">
-          <pre>  user1={
+          <pre>
+  user1={
                          name:"Salil ",
                          age:28,
                          mobile:9654847170,
@@ -399,14 +419,10 @@
              console.log(printFullName.apply(user2,["Kumari"]))
              const newUser= printFullName.bind(user1,"Trivedi")
              console.log(newUser())
-        </pre>
+        </pre
+          >
         </div>
       </div>
-
-
-
-
-
 
       <div class="accordion">
         <div class="accordion-header">
@@ -437,25 +453,60 @@
         </div>
       </div>
 
-      <!-- 2 -->
+      <div class="accordion">
+        <div class="accordion-header">
+          Remove a Given Character from a String with inbuilt method and without
+          inbuilt method <span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+
+            str = "hello world"
+            char = "l"
+
+            function removeChar(str, char) {
+              return str.replaceAll(char, "");
+            }
+
+            Or
+            function removeChar(str, char) {
+              return str.split(char).join("");
+            }
+
+            Or
+              function removeChar(str, char) {
+                let result = "";
+
+                for (let i = 0; i < str.length; i++) {
+                  if (str[i].toLowerCase() !== char.toLowerCase()) {
+                    result += str[i];
+                  }
+                }
+
+                return result;
+              }
+
+          </pre>
+        </div>
+      </div>
+
       <div class="accordion">
         <div class="accordion-header">
           Remove Duplicates from Array with Set and without Set <span>+</span>
         </div>
         <div class="accordion-content">
           <pre>
-// Using Set
-console.log([...new Set([1,2,1,3,2,4])]);
+          // Using Set
+          console.log([...new Set([1,2,1,3,2,4])]);
 
-// Without Set
-const arr = [1,2,1,3,2,4];
-let unique = [];
-for (let n of arr) {
-  if (!unique.includes(n)) unique.push(n);
-}
-console.log(unique);
-</pre
-          >
+          // Without Set
+          const arr = [1,2,1,3,2,4];
+          let unique = [];
+          for (let n of arr) {
+            if (!unique.includes(n)) unique.push(n);
+          }
+          console.log(unique);
+          </pre>
         </div>
       </div>
 
@@ -494,17 +545,6 @@ console.log(str === rev ? "Palindrome" : "Not Palindrome");
         </div>
       </div>
 
-      <!-- 5 -->
-      <div class="accordion">
-        <div class="accordion-header">
-          Sort Array const arr =[20,11,1,9,30,4,5] with Sort and without
-          Sort<span>+</span>
-        </div>
-        <div class="accordion-content">
-          <pre></pre>
-        </div>
-      </div>
-
       <div class="accordion">
         <div class="accordion-header">Find prime number <span>+</span></div>
         <div class="accordion-content">
@@ -539,62 +579,6 @@ console.log(str === rev ? "Palindrome" : "Not Palindrome");
               const primeNumbers = arr.filter(isPrime);
 
               console.log(primeNumbers);
-
-              </pre
-          >
-        </div>
-      </div>
-
-      <div class="accordion">
-        <div class="accordion-header">Pattern Program<span>+</span></div>
-        <div class="accordion-content">
-          <pre>
-                *
-                **
-                ***
-                ****
-                *****
-
-                let pattern = "";
-
-                  for (let i = 1; i < = 5; i++) {
-                    pattern += "*".repeat(i) + "\n";
-                  }
-
-                  console.log(pattern);
-
-                OR
-                
-                let pattern = "";
-
-                for (let i = 1; i < = 5; i++) {        // rows
-                  for (let j = 1; j < = i; j++) {      // columns / stars
-                    pattern += "*";
-                  }
-                  pattern += "\n";                     // new line after each row
-                }
-
-                console.log(pattern);
-
-                let rows = 5;      // number of rows
-                let pattern = "";
-                for (let i = 1; i <= rows; i++) {          // each row
-                  // 1️⃣ Add spaces (rows - i)
-                  for (let j = 1; j <= rows - i; j++) {
-                    pattern += " ";
-                  }
-                  
-                  // 2️⃣ Add stars (2*i - 1)
-                  for (let k = 1; k <= 2 * i - 1; k++) {
-                    pattern += "*";
-                  }
-                  
-                  // 3️⃣ New line
-                  pattern += "\n";
-                }
-
-                console.log(pattern);
-
 
               </pre
           >
@@ -968,70 +952,6 @@ console.log(str === rev ? "Palindrome" : "Not Palindrome");
         </div>
       </div>
 
-      <!-- 20 -->
-      <div class="accordion">
-        <div class="accordion-header">
-          Promise Example with Catch <span>+</span>
-        </div>
-        <div class="accordion-content">
-          <pre>
-            A Promise represents the eventual completion or failure of an asynchronous operation.
-
-          States:
-
-          Pending
-
-          Fulfilled
-
-          Rejected
-
-          Why do we need Promises?
-
-Avoid callback hell
-
-Better error handling
-
-Cleaner async code
-
-          function checkNumber(num) {
-            return new Promise((resolve, reject) => {
-              if (num > 0) {
-                resolve("Number is positive");
-              } else {
-                reject("Number is not positive");
-              }
-            });
-          }
-
-          // Using the promise
-          checkNumber(5)
-            .then(result => {
-              console.log(result); // Number is positive
-            })
-            .catch(error => {
-              console.log(error);
-            });
-
-            Or 
-
-            // Using the promise with fetch 
-
-            function fetchData() {
-              return new Promise((resolve, reject) => {
-                setTimeout(() => {
-                  resolve("Data fetched successfully");
-                }, 2000);
-              });
-            }
-
-            fetchData()
-              .then(data => console.log(data))
-              .catch(err => console.log(err));
-
-          </pre>
-        </div>
-      </div>
-
       <!-- 21 -->
       <div class="accordion">
         <div class="accordion-header">
@@ -1039,39 +959,37 @@ Cleaner async code
         </div>
         <div class="accordion-content">
           <pre>
-console.log("start");
-setTimeout(() => console.log("timeout"), 0);
-Promise.resolve().then(() => console.log("promise"));
-console.log("end");
+          console.log("start");
+          setTimeout(() => console.log("timeout"), 0);
+          Promise.resolve().then(() => console.log("promise"));
+          console.log("end");
 
 
-JavaScript is single-threaded, meaning it can do one thing at a time.
+          JavaScript is single-threaded, meaning it can do one thing at a time.
 
-The Event Loop manages:
-Call Stack → where code is executed
-Web APIs → browser features like setTimeout
-Task Queues
-Microtask Queue (Promises)
-Macrotask Queue (setTimeout, setInterval)
-👉 Rule:
-Microtasks always run before macrotasks.
+          The Event Loop manages:
+          Call Stack → where code is executed
+          Web APIs → browser features like setTimeout
+          Task Queues
+          Microtask Queue (Promises)
+          Macrotask Queue (setTimeout, setInterval)
+          👉 Rule:
+          Microtasks always run before macrotasks.
 
-Key Takeaways
-JavaScript executes synchronous code first
-Promises (microtasks) run before setTimeout (macrotasks)
-setTimeout(..., 0) does not mean “run immediately”
+          Key Takeaways
+          JavaScript executes synchronous code first
+          Promises (microtasks) run before setTimeout (macrotasks)
+          setTimeout(..., 0) does not mean “run immediately”
 
-// Output:
-// start
-// end
-// promise
-// timeout
-</pre
-          >
+          // Output:
+          // start
+          // end
+          // promise
+          // timeout
+          </pre>
         </div>
       </div>
 
-      <!-- 22 -->
       <div class="accordion">
         <div class="accordion-header">
           Exaplain and fix the var vs let in setTimeout <span>+</span>
@@ -1100,7 +1018,6 @@ let is block-scoped, so each loop iteration gets its own binding.
         </div>
       </div>
 
-      <!-- 23 -->
       <div class="accordion">
         <div class="accordion-header">== vs === Difference <span>+</span></div>
         <div class="accordion-content">
@@ -1117,7 +1034,6 @@ let is block-scoped, so each loop iteration gets its own binding.
         </div>
       </div>
 
-      <!-- 24 -->
       <div class="accordion">
         <div class="accordion-header">
           Predict output (Loss of this Context) <span>+</span>
@@ -1154,6 +1070,9 @@ Arrow functions don’t have their own this; they inherit it from the surroundin
           >
         </div>
       </div>
+
+      <!-- 20 -->
+
 
       <!-- 25 -->
       <div class="accordion">
@@ -1246,6 +1165,7 @@ Arrow functions don’t have their own this; they inherit it from the surroundin
         </div>
       </div>
 
+
       <div class="accordion">
         <div class="accordion-header">Union of Two Arrays<span>+</span></div>
         <div class="accordion-content">
@@ -1305,6 +1225,22 @@ Arrow functions don’t have their own this; they inherit it from the surroundin
 
               console.log(freq)
           </pre>
+        </div>
+      </div>
+
+         <div class="accordion">
+        <div class="accordion-header">
+          Find Common Elements in Two Arrays in js. / Intersection in js<span
+            >+</span
+          >
+        </div>
+        <div class="accordion-content">
+          <pre>
+                const arr1=[1,2,3,5,6];
+                const arr2=[2,3,4,6,4,1];
+                console.log(arr1.filter((item)=>arr2.includes(item)))
+              </pre
+          >
         </div>
       </div>
 
@@ -1545,30 +1481,66 @@ Arrow functions don’t have their own this; they inherit it from the surroundin
         </div>
       </div>
 
-      <div class="accordion">
+       <div class="accordion">
         <div class="accordion-header">
-          console.log([1,2]+[3,4]) Why Output:- console.log((1,2,3,4))<span
-            >+</span
-          >
-        </div>
-        <div class="accordion-content">
-          <pre></pre>
-        </div>
-      </div>
-
-      <div class="accordion">
-        <div class="accordion-header">
-          Find Common Elements in Two Arrays in js. / Intersection in js<span
-            >+</span
-          >
+          Promise Example with Catch <span>+</span>
         </div>
         <div class="accordion-content">
           <pre>
-                const arr1=[1,2,3,5,6];
-                const arr2=[2,3,4,6,4,1];
-                console.log(arr1.filter((item)=>arr2.includes(item)))
-              </pre
-          >
+            A Promise represents the eventual completion or failure of an asynchronous operation.
+
+          States:
+
+          Pending
+
+          Fulfilled
+
+          Rejected
+
+          Why do we need Promises?
+
+Avoid callback hell
+
+Better error handling
+
+Cleaner async code
+
+          function checkNumber(num) {
+            return new Promise((resolve, reject) => {
+              if (num > 0) {
+                resolve("Number is positive");
+              } else {
+                reject("Number is not positive");
+              }
+            });
+          }
+
+          // Using the promise
+          checkNumber(5)
+            .then(result => {
+              console.log(result); // Number is positive
+            })
+            .catch(error => {
+              console.log(error);
+            });
+
+            Or 
+
+            // Using the promise with fetch 
+
+            function fetchData() {
+              return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                  resolve("Data fetched successfully");
+                }, 2000);
+              });
+            }
+
+            fetchData()
+              .then(data => console.log(data))
+              .catch(err => console.log(err));
+
+          </pre>
         </div>
       </div>
 
@@ -1595,12 +1567,16 @@ console.log(total)
       </div>
 
 
+
+
+
+
       <div class="accordion">
         <div class="accordion-header">
           What is promise chaining? <span>+</span>
         </div>
         <div class="accordion-content">
-            <pre>
+          <pre>
                 Sum values inside nested objects
                 const arr = [
                   { name: "A", items: [10, 20] },
@@ -1608,17 +1584,17 @@ console.log(total)
                 ];
                 const total = arr.flatMap(item => item.items).reduce((a, b) => a + b, 0);
                 console.log(total)
-              </pre>
+              </pre
+          >
         </div>
       </div>
 
-
       <div class="accordion">
         <div class="accordion-header">
-         Group items by a property <span>+</span>
+          Group items by a property <span>+</span>
         </div>
         <div class="accordion-content">
-            <pre>
+          <pre>
                const arr = [
                 { name: "A", dept: "IT" },
                 { name: "B", dept: "HR" },
@@ -1637,17 +1613,17 @@ console.log(total)
               }
 
               console.log(dept)
-              </pre>
+              </pre
+          >
         </div>
       </div>
 
-
       <div class="accordion">
         <div class="accordion-header">
-         Merege two arrays of object <span>+</span>
+          Merege two arrays of object <span>+</span>
         </div>
         <div class="accordion-content">
-            <pre>
+          <pre>
                const arr1 = [
                 { id: 1, name: "Alice" },
                 { id: 2, name: "Bob" }
@@ -1666,17 +1642,18 @@ console.log(total)
               ];
 
               console.log(merged);
-              </pre>
+              </pre
+          >
         </div>
       </div>
 
-
-       <div class="accordion">
-        <div class="accordion-header">
-        sum(1)(2)(3)(4)()<span>+</span>
-        </div>
+      <div class="accordion">
+        <div class="accordion-header">sum(1)(2)(3)(4)()<span>+</span></div>
         <div class="accordion-content">
-            <pre>
+          Currying in JavaScript transforms a function with multiple arguments
+          into a nested series of functions, each taking a single argument. it
+          helps you create a higher order function.
+          <pre>
              let sum=function (a){
             return function(b){
                 if(b!==undefined){
@@ -1709,18 +1686,17 @@ Explain the stopping condition (important!)
 
 
 This is a curried sum function using closures. Each call stores the current total in a closure and returns another function. The chain ends when the function is called without arguments, at which point it returns the accumulated sum.”
-              </pre>
+              </pre
+          >
         </div>
       </div>
 
-
-
-        <div class="accordion">
+      <div class="accordion">
         <div class="accordion-header">
-      Currying Function with bind and closure<span>+</span>
+          Currying Function with bind and closure<span>+</span>
         </div>
         <div class="accordion-content">
-              <pre>
+          <pre>
                 With bind Example:-
 
                   let multiply =function(x,y){
@@ -1744,15 +1720,271 @@ This is a curried sum function using closures. Each call stores the current tota
 
                     console.log(multiplyTwo(2))
 
+              </pre
+          >
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">Output questions<span>+</span></div>
+        <div class="accordion-content">
+          <pre>
+               Program 1
+                function test() {
+                console.log(test.abc)
+                }
+                test()
+                test.abc=400;
+                test.abc=600;
+                test()
+
+                Program 2
+                console.log({}=={})
+                console.log({}==={})
+                Objects are compared by reference, not by value
+                Every time you write {} you create a new object in memory.
+
+                Program 3
+                let a={
+                  name:"salil"
+                  }
+                let b={...a}
+                b.name="Raja"
+                console.log(a.name)
+
+                Program 4
+
+                let a = 10;
+                let b = new Number(10);
+                let c = 10;
+
+                console.log(a === b)
+                console.log(b === c)
+
+                number primitive vs object → ❌ different types → false
+                
+                object vs number primitive → ❌ different types → false
+              </pre
+          >
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">Output questions<span>+</span></div>
+        <div class="accordion-content">
+          <pre>
+
+                let obj = [ {Sno: 1, score: 20}, {Sno: 2, score: 30}, {Sno: 1, score: 50}, let newArr = 0 / Expected Result: Remove the duplicates and consolidate the value. // [Sno: 1, score: 70}, {Sno: 2, score: 30}]
+
+
+
+                let obj = [
+                    { Sno: 1, score: 20 },
+                    { Sno: 2, score: 30 },
+                    { Sno: 1, score: 50 }
+                  ];
+
+                  let result = [];
+                  let lookup = {};
+
+                  for (let i = 0; i < obj.length; i++) {
+                    let sno = obj[i].Sno;
+
+                    if (lookup[sno] !== undefined) {
+                      // duplicate → add score
+                      result[lookup[sno]].score += obj[i].score;
+                    } else {
+                      // first time → store index
+                      lookup[sno] = result.length;
+                      result.push({ Sno: sno, score: obj[i].score });
+                    }
+                  }
+
+                  console.log(result);
+
+               
+              </pre
+          >
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">
+          Sort Array without sort method and with method<span>+</span>
+        </div>
+        <div class="accordion-content">
+          <pre>
+
+             let arr = [5, 2, 8, 1, 3];
+
+            for (let i = 0; i < arr.length; i++) {
+              for (let j = 0; j < arr.length - 1 - i; j++) {
+                if (arr[j] > arr[j + 1]) {
+                  let temp = arr[j];
+                  arr[j] = arr[j + 1];
+                  arr[j + 1] = temp;
+                }
+              }
+            }
+
+            console.log(arr);
+
+
+               
+              </pre
+          >
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">Flattern Object<span>+</span></div>
+        <div class="accordion-content">
+          <pre>
+
+  function flattenWithForLoop(current, result = {}) {
+  const keys = Object.keys(current);
+
+  for (let i = 0; i < keys.length; i++) {
+    const key = keys[i];
+
+    if (typeof current[key] === "object" && current[key] !== null) {
+      flattenWithForLoop(current[key], result); // recursive call
+    } else {
+      result[key] = current[key]; // add primitive value to result
+    }
+  }
+
+  return result;
+}
+
+
+const obj = {
+  name: "test",
+  address: {
+    personal: "abcd",
+    office: {
+      building: "efgh",
+      street: "hijk",
+      location: {
+        landmark: "efgh",
+        pin: "7888"
+      }
+    }
+  }
+};
+
+const flattened = flattenWithForLoop(obj);
+console.log(flattened);
+
+               
+              </pre
+          >
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">Debounce Example<span>+</span></div>
+        <div class="accordion-content">
+          <pre>
+                  <input type="text" id="search" placeholder="search..."/>
+                  
+                    function debounce(fn, delay) {
+                      let timer;
+
+                      return function (...args) {
+                        clearTimeout(timer);
+                        timer = setTimeout(() => {
+                          fn.apply(this, args);
+                        }, delay);
+                      };
+                    }
+
+
+                    const input = document.getElementById('search');
+                    function handleInput(event) {
+                      console.log('API call with:', event.target.value);
+                    }
+                    const debouncedHandler = debounce(handleInput, 300);
+                    input.addEventListener('input', debouncedHandler);
+               
               </pre>
         </div>
       </div>
 
+      <div class="accordion">
+        <div class="accordion-header">Pattern Program<span>+</span></div>
+        <div class="accordion-content">
+          <pre>
+                *
+                **
+                ***
+                ****
+                *****
+
+                let pattern = "";
+
+                  for (let i = 1; i < = 5; i++) {
+                    pattern += "*".repeat(i) + "\n";
+                  }
+
+                  console.log(pattern);
+
+                OR
+                
+                let pattern = "";
+
+                for (let i = 1; i < = 5; i++) {        // rows
+                  for (let j = 1; j < = i; j++) {      // columns / stars
+                    pattern += "*";
+                  }
+                  pattern += "\n";                     // new line after each row
+                }
+
+                console.log(pattern);
+
+                let rows = 5;      // number of rows
+                let pattern = "";
+                for (let i = 1; i <= rows; i++) {          // each row
+                  // 1️⃣ Add spaces (rows - i)
+                  for (let j = 1; j <= rows - i; j++) {
+                    pattern += " ";
+                  }
+                  
+                  // 2️⃣ Add stars (2*i - 1)
+                  for (let k = 1; k <= 2 * i - 1; k++) {
+                    pattern += "*";
+                  }
+                  
+                  // 3️⃣ New line
+                  pattern += "\n";
+                }
+
+                console.log(pattern);
 
 
+              </pre
+          >
+        </div>
+      </div>
     </main>
 
-<!-- 
+    <!-- 
+
+    function formatString(str) {
+  return str
+    .split('')
+    .map((char, index) => 
+      char.toUpperCase() + char.toLowerCase().repeat(index)
+    )
+    .join('-');
+}
+
+console.log(formatString("abcd"));
+
+
+A-Bb-Ccc-Dddd
+
+
 
     1. Cookies 🍪
 What they are
@@ -1821,10 +2053,6 @@ Cookies → Authentication, server-side needs
 localStorage → Persistent user preferences
 
 sessionStorage → Temporary session data -->
-
-
-
-
 
     <footer>📘 JavaScript Interview Accordion Notes</footer>
 

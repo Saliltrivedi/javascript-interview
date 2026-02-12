@@ -1,23 +1,36 @@
 
-
-var x=1;
-a();
-b();
-
-console.log(x)
-
-
-
-function a(){
-    var x=10;
-    console.log(x)
+function x(){
+    let a=10
+      function y(){
+    
+     console.log(a)      
+}
 }
 
+console.log(x())
 
-function b(){
-    var y=10;
-    console.log(y)
-}
+
+
+
+
+// var x=1;
+// a();
+// b();
+
+// console.log(x)
+
+
+
+// function a(){
+//     var x=10;
+//     console.log(x)
+// }
+
+
+// function b(){
+//     var y=10;
+//     console.log(y)
+// }
 
 // 1.  What is Function Statement ?
 // A.  A normal function that we create using Naming convention. & By this we can do the Hoisting.

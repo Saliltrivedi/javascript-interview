@@ -84,7 +84,7 @@ input[type="text"],input[type="email"],select{
             <li id="cameras"> Cameras</li>
             <li id="Shoes"> Shoes</li>   
     </ul> -->
-
+<input type="text" id="search" placeholder="Type something..." />
             <div id="userData">
 
             </div>
@@ -422,17 +422,6 @@ c1.start(); -->
             </p>
         </details>
 
-        <details>
-            <summary>Program 32. find total [a] element in the array var arr =
-                ['a', 'b', 'a', 'a', 'c', 'c']; </summary>
-            <p>
-                <pre> 
-            var arr = ['a', 'b', 'a', 'a', 'c', 'c'];
-            var b = arr.filter(item =>{if(item==='a'){return item}     } ).length
-            console.log("a",b)    
-        </pre>
-            </p>
-        </details>
 
         <details>
             <summary>Program 33. Destructuring Example with array and object
@@ -478,142 +467,8 @@ c1.start(); -->
             </p>
         </details>
 
-        <details>
-            <summary>Program 34. Map Print firstName from the given
-                arrray</summary>
-            <p>
-                <pre> 
-                var arr = [
-                        {
-                         firstName:"Salil",
-                         lastName:"Trivedi",
-                         age:25   
-                        },
-
-                        {
-                            firstName:"John",
-                            lastName:"Doe",
-                            age:18   
-                           },
-
-                           {
-                            firstName:"Rohit",
-                            lastName:"T",
-                            age:20   
-                           },
-                ];
-               var nameList = arr.map((item)=>{ return(item.firstName)})
-               console.log(nameList)
-        </pre>
-            </p>
-        </details>
 
         <details>
-            <summary>Program 34. Filter The Object if age is greater than
-                18</summary>
-            <p>
-                <pre> 
-          var arr = [
-                    {
-                    firstName:"Salil",
-                    lastName:"Trivedi",
-                    age:25   
-                    },
-
-                    {
-                        firstName:"John",
-                        lastName:"Doe",
-                        age:18   
-                    },
-
-                    {
-                        firstName:"Rohit",
-                        lastName:"T",
-                        age:20   
-                    },
-            ];
-        var nameList = arr.filter((item)=>{ 
-                        if(item.age>18)
-                {
-                    return item   
-                }
-            
-        })
-console.log(nameList)
-console.log(arr.map((item)=>item.firstName)) 
-console.log(arr.filter((item)=>item.age>18)) console.log(arr.sort((a,b)=>a.firstName.localeCompare(b.firstName))) console.log(arr.sort((a, b) => a.age - b.age))
-
-        √1. Find a specific user by name (using find)
-const user = arr.find(item => item.firstName === "Rohit");
-console.log(user);
-
-✅ 2. Get full names of all users
-const fullNames = arr.map(item => `${item.firstName} ${item.lastName}`);
-console.log(fullNames);
-
-✅ 3. Count how many users are above 20
-const count = arr.filter(item => item.age > 20).length;
-console.log(count);
-
-✅ 4. Check if any user is under 18 (some)
-const isUnder18 = arr.some(item => item.age < 18);
-console.log(isUnder18);
-
-✅ 5. Check if all users are adults (every)
-const allAdults = arr.every(item => item.age >= 18);
-console.log(allAdults);
-
-✅ 6. Sort by lastName + firstName (full alphabetic sort)
-arr.sort((a, b) =>
-  a.lastName.localeCompare(b.lastName) ||
-  a.firstName.localeCompare(b.firstName)
-);
-
-✅ 7. Convert the array into an object using reduce
-
-Example: key by firstName.
-
-const obj = arr.reduce((acc, item) => {
-  acc[item.firstName] = item;
-  return acc;
-}, {});
-console.log(obj);
-
-✅ 8. Get the oldest person
-const oldest = arr.reduce((max, item) =>
-  item.age > max.age ? item : max
-);
-console.log(oldest);
-
-✅ 9. Group users by lastName
-const group = arr.reduce((acc, item) => {
-  if (!acc[item.lastName]) acc[item.lastName] = [];
-  acc[item.lastName].push(item);
-  return acc;
-}, {});
-
-console.log(group);
-
-✅ 10. Remove a user by name (common interview question)
-const filtered = arr.filter(item => item.firstName !== "John");
-console.log(filtered);
-
-✅ 11. Add a new property to each object
-const updated = arr.map(item => ({
-  ...item,
-  isAdult: item.age >= 18
-}));
-
-console.log(updated);
-        </pre>
-            </p>
-        </details>
-
-        
-
-
-
-             <details>
             <summary>Program . Arrow Function</summary>
             <p>An arrow function is a shorter and cleaner way to write functions in JavaScript, introduced in ES6 (2015).
              </p>   
@@ -789,63 +644,6 @@ console.log(updated);
             </p>
         </details>
 
-        <details>
-            <summary>Program 39. var arr = [1,2,3,4,5] rotate array nth
-                time</summary>
-            <p>
-
-                <pre>
-        
-              var  arr = [1,2,3,4,5];
-                let n=3;
-                function arrsort(arr,n){
-                    for(let i=0; i < n; i++)
-                        {
-                                let lastItem = arr.pop();
-                                arr.unshift(lastItem)
-                                console.log(arr)
-                        }
-                }
-                console.log(arrsort(arr,n))
-          
-
-        </pre>
-            </p>
-        </details>
-
-        <details>
-            <summary>Program 40. Short Program</summary>
-            <p>
-
-                <pre>
-        
-          
-            
-            
-     
-            
-            
-            var convertToString = a+"";
-            var narr = convertToString.split("");
-            var result= narr.map((item)=>{
-              return(
-              parseInt(item)*parseInt(item)
-              )
-              } 
-            )
-            console.log(result.join(''))
-
-
-            (function() {
-                console.log(1); 
-                setTimeout(function(){console.log(2)}, 1000); 
-                setTimeout(function(){console.log(3)}, 0); 
-                console.log(4);
-            })();  // 1 4 3 2
-
-        </pre>
-            </p>
-        </details>
 
         <details>
             <summary>Program 40. What is Currying</summary>
@@ -889,44 +687,6 @@ console.log(updated);
         </details>
 
         <details>
-            <summary>Program 41. Array find the frequency of element const ar =
-                [1, 2, 3, 4, 1, 2];</summary>
-            <p>
-                <pre>
-          const frequency = {};
-            for (let i = 0; i < ar.length; i++) {
-                let x = ar[i];
-                console.log(frequency[x] )
-            if (frequency[x] === undefined) {
-            frequency[x] = 1; // first occurrence
-            } else {
-            frequency[x] = frequency[x] + 1; // increment
-            }
-            }
-                console.log(frequency);
-        </pre>
-            </p>
-        </details>
-
-        <details>
-            <summary>Program 42. Array create chunk ->3 const ar = [1, 2, 3, 4,
-                5,6,8,9,4];</summary>
-            <p>
-                <pre>
-          const ar = [1, 2, 3, 4, 5,6,8,9,4];
-            const result = [];
-            let chunkSize=3;
-            for (let i = 0; i < ar.length; i =i+chunkSize) {
-                console.log(i)
-                const chunk = ar.slice(i,i+chunkSize)
-                result.push(chunk)
-            }
-            console.log(result);
-        </pre>
-            </p>
-        </details>
-
-        <details>
             <summary>Program 43. Event Deligation Program</summary>
             <p>
                 Event Delegation is a technique in JavaScript where you attach a single event listener to a parent element instead of attaching it to multiple child elements. The parent listens for events that bubble up from its children and handles them dynamically.
@@ -952,7 +712,7 @@ console.log(updated);
         </details>
 
 
-            <details>
+        <details>
             <summary>Program 43. Event Bubbling Program</summary>
             <p>
                Event bubbling in JavaScript is how events travel through the DOM when something 
@@ -995,23 +755,7 @@ document.getElementById("child").addEventListener("click", (event) => {
             </p>
         </details>
 
-        <details>
-            <summary>Program 44 . Find Intersection in Arrays</summary>
-            <p>
-                <pre>
-        const array1 =[1,2,3,4,5];
-        const array2 =[4,5,6,7,8];
-        const array3 =[5,4,9,10,2];
-        const intersection=findIntersection(array1,array2,array3);
-        function findIntersection(...arrays){
-            
-            return arrays[0].filter(item=>arrays.every(arr=>arr.includes(item)));
-
-        }
-        console.log(intersection)
-        </pre>
-            </p>
-        </details>
+       
 
         <details>
             <summary>Program 45 . Find missing number in Arrays</summary>
@@ -1108,90 +852,7 @@ document.getElementById("child").addEventListener("click", (event) => {
             </p>
         </details>
 
-        <details>
-            <summary>Program 48 . str1="abc" str2=123456 I want output
-                a1b2c3456.</summary>
-            <p>
-                <pre>
-        function mergeStrings(s1, s2) {
-            let maxLen = Math.max(s1.length, s2.length);
-            let result = "";
 
-            for (let i = 0; i < maxLen; i++) {
-                if (s1[i]) result += s1[i];
-                if (s2[i]) result += s2[i];
-            }
-            return result;
-            }
-
-            console.log(mergeStrings("abc", "123456"));   // a1b2c3456
-            console.log(mergeStrings("abcdxyz", "123"));  // a1b2c3dxyz
-
-        </pre>
-
-                <pre>
-            let str1 = "abcdef";
-            let str2 = "123456";
-            let result = [...str1].map((ch, i) => ch + (str2[i] || "")).join("") + str2.slice(str1.length);
-            console.log(result); 
-        </pre>
-
-        <pre>
-            function mergeStrings(str1, str2) {
-    let result = "";
-    const len = Math.min(str1.length, str2.length);
-
-    // Interleave characters
-    for (let i = 0; i < len; i++) {
-        result += str1[i] + str2[i];
-    }
-
-    // Add remaining part of the longer string
-    result += str1.slice(len) + str2.slice(len);
-
-    return result;
-}
-
-console.log(mergeStrings("abc", "123456")); // a1b2c3456
-console.log(mergeStrings("abcd", "12"));    // a1b2cd
-console.log(mergeStrings("xy", "12345"));   // x1y2345
-
-        </pre>
-
-
-            </p>
-        </details>
-        // function test() {
-        // console.log(test.abc)
-        // }
-
-        // test()
-        // test.abc=400;
-        // test.abc=600;
-        // test()
-
-        // console.log({}=={})
-        // console.log({}==={})
-
-        // let a={
-        // name:"salil"
-        // }
-        // let b={...a}
-        // b.name="Raja"
-
-        // console.log(a.name)
-
-        // let a=10;
-
-        // let b=new Number(10);
-
-        // let c=10;
-
-        // console.log(a===b)
-        // console.log(b===c)
-
-        // console.log(+true)
-        // console.log(!"test")
 
         <!-- 
 Implement your own map() / filter() / reduce().
@@ -1249,7 +910,7 @@ Make a automated time useing React Js
         <div id="dd">
             <user-card></user-card>
         </div>
-        <!-- <script src="./index.js"></> -->
+        <!-- </> -->
 
         <!-- <div class="form_wrapper" id="form_wrapper">
         <form class="" id="userForm">
@@ -1287,11 +948,60 @@ Make a automated time useing React Js
         <script>
 
 
+// function x(){
+    
+//     let a=10
+//       function y(){       
+//         console.log(a)      
+//     }
+    
+//     a=100;
+    
+//     y();
+// }
 
-var x=7;
-function getName(){
-    consol.log("Value",x)
+// console.log(x())
+
+function debounce(fn, delay) {
+  let timer;
+
+  return function (...args) {
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      fn.apply(this, args);
+    }, delay);
+  };
 }
+
+
+const input = document.getElementById('search');
+function handleInput(event) {
+  console.log('API call with:', event.target.value);
+}
+const debouncedHandler = debounce(handleInput, 300);
+input.addEventListener('input', debouncedHandler);
+
+
+// function sum(a){
+//     debugger
+//     return function (b){
+//         debugger    
+//         return function(c){
+//                         return function(d){
+//                             debugger
+//                             return a+b+c+d
+//                         }
+//             }
+//     }
+// }
+
+
+// console.log("sum",sum(1)(2)(3)(4))
+
+// var x=7;
+// function getName(){
+//     consol.log("Value",x)
+// }
 
 // document.getElementById("userForm").addEventListener('submit', function(e){
 //            e.preventDefault();
@@ -1362,62 +1072,62 @@ function getName(){
 
     // console.log(response.json);
 
-document.querySelector("#itemCategory").addEventListener('click',(e)=>{
-            console.log(e.target.id )
-            if(e.target.innerText=='Laptop'){
-                alert("Laptop")
-            }
-        })
+// document.querySelector("#itemCategory").addEventListener('click',(e)=>{
+//             console.log(e.target.id )
+//             if(e.target.innerText=='Laptop'){
+//                 alert("Laptop")
+//             }
+//         })
 
 
 
-const data =  async()=> {
-        const getData = await fetch ('https://dummyjson.com/products/');
-        const  result = await getData.json();
-        return result;
-    }
+// const data =  async()=> {
+//         const getData = await fetch ('https://dummyjson.com/products/');
+//         const  result = await getData.json();
+//         return result;
+//     }
 
-    data().then( (item)=>{
-        console.log('item',item.products)
-        item.products.map((item)=>{
-            console.log('title',item.title)
-        })
-    }
-    )
-
-
-var  arr = [1,2,3,4,5];
-var n=3;
-function arrsort(arr,n){
-    for(let i=0; i<n; i++){
-                let lastItem = arr.pop();
-                arr.unshift(lastItem)
-                console.log(arr)
-        }
-}
-
-console.log(arrsort(arr,n))
+//     data().then( (item)=>{
+//         console.log('item',item.products)
+//         item.products.map((item)=>{
+//             console.log('title',item.title)
+//         })
+//     }
+//     )
 
 
+// var  arr = [1,2,3,4,5];
+// var n=3;
+// function arrsort(arr,n){
+//     for(let i=0; i<n; i++){
+//                 let lastItem = arr.pop();
+//                 arr.unshift(lastItem)
+//                 console.log(arr)
+//         }
+// }
 
-var arr = ['aaa','bbb','ccc','aaa','ddd','ccc'];
-var item ={};
+// console.log(arrsort(arr,n))
 
-for(var i=0;i<arr.length;i++){
+
+
+// var arr = ['aaa','bbb','ccc','aaa','ddd','ccc'];
+// var item ={};
+
+// for(var i=0;i<arr.length;i++){
 	
-        console.log(arr[i])		
-        let count = arr[i]
+//         console.log(arr[i])		
+//         let count = arr[i]
     
-        if(item[count]){
-           item[count]= item[count]+1;
-        }
-    else{
-       item[count]=1;
-    }
-     console.log(item[count])
-}
+//         if(item[count]){
+//            item[count]= item[count]+1;
+//         }
+//     else{
+//        item[count]=1;
+//     }
+//      console.log(item[count])
+// }
 
-console.log(item)
+// console.log(item)
 
 
 // When we talk about Controlled and Uncontrolled Components, it’s always referring to components which are handling forms or form inputs in them.
@@ -1432,33 +1142,33 @@ console.log(item)
 // }
 // multiplyNumeric(num)
 
-function myFunction(){
-    var name =    document.getElementById('userName').value;
-    var ele =    document.getElementById('fbutton');
+// function myFunction(){
+//     var name =    document.getElementById('userName').value;
+//     var ele =    document.getElementById('fbutton');
 
 
-    if(name!=''){
-        ele.removeAttribute("disabled");
-    }
-    else{
-        ele.setAttribute('disabled','disabled')
-    }
-}
+//     if(name!=''){
+//         ele.removeAttribute("disabled");
+//     }
+//     else{
+//         ele.setAttribute('disabled','disabled')
+//     }
+// }
 
-document.getElementById('form_wrapper').style.backgroundColor='#fafafa';
+// document.getElementById('form_wrapper').style.backgroundColor='#fafafa';
 
-var userForm = document.getElementById("userForm");
+// var userForm = document.getElementById("userForm");
 
 
-            userForm.addEventListener('submit',function(e){
+//             userForm.addEventListener('submit',function(e){
                   
-            //  e.preventDefault();
-            var data   = new FormData(userForm).entries();
-            var result = JSON.stringify(Object.fromEntries(data));
+//             //  e.preventDefault();
+//             var data   = new FormData(userForm).entries();
+//             var result = JSON.stringify(Object.fromEntries(data));
            
-            var finalResult = JSON.parse(result);
-            console.log(finalResult)    
-            })
+//             var finalResult = JSON.parse(result);
+//             console.log(finalResult)    
+//             })
 
 
 
